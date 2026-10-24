@@ -35,9 +35,6 @@ export function Hero() {
   return (
     <section ref={section} id="top" aria-labelledby="hero-title" className="relative h-[220svh]">
       <div ref={stage} className="sticky top-0 flex h-svh w-full flex-col items-center justify-center overflow-hidden">
-        {/* ambient: a slow brass glow behind the card */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_50%_42%,rgb(216_192_138/0.14),transparent_70%)]" />
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(40%_40%_at_20%_80%,rgb(111_169_139/0.10),transparent_70%)]" />
 
         <CardSheen flipRef={flipRef} className="absolute inset-0 h-full w-full" />
 

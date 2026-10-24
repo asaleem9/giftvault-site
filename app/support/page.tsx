@@ -44,7 +44,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
 
 export default function SupportPage() {
   return (
-    <Paper title="Support" lede="Most questions are answered below. If yours is not, get in touch." updated="October 2026">
+    <Paper title="Support" lede="Most questions are answered below. If yours is not, get in touch." updated="October 2026" pose="wave">
       <section>
         <h2>Contact</h2>
         <p>

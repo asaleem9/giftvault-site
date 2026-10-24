@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <Paper title="Privacy" lede="GiftVault keeps your gift cards on your devices. There is no GiftVault account, no server that sees your cards, and no tracking." updated="October 2026">
+    <Paper title="Privacy" lede="GiftVault keeps your gift cards on your devices. There is no GiftVault account, no server that sees your cards, and no tracking." updated="October 2026" pose="register">
       <section>
         <h2>What the app stores</h2>
         <p>

@@ -83,7 +83,7 @@ export function Vault() {
         visible && !docked ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
       }`}
     >
-      <div className="rounded-2xl border border-hairline bg-glass p-3 shadow-[0_20px_60px_-20px_rgb(0_0_0/0.7)] backdrop-blur-xl">
+      <div className="rounded-lg border border-hairline bg-surface p-3 shadow-[0_20px_60px_-20px_rgb(0_0_0/0.7)]">
         <div className="flex items-baseline justify-between">
           <span className="eyebrow !text-[10px]">Your vault</span>
           <span ref={totalRef} className="tabular font-mono text-sm font-semibold text-brass">{fmt(0)}</span>

@@ -6,6 +6,7 @@ import { Odometer } from "@/components/Odometer";
 import { brandCardById } from "@/lib/brand-cards";
 import { ensureGsap, prefersReducedMotion } from "@/lib/scroll";
 import { vaultCards, vaultTotal } from "@/components/vault/Vault";
+import { Mascot } from "@/components/Mascot";
 
 const fmt = (c: number) => `$${(c / 100).toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
 
@@ -39,7 +40,9 @@ export function Cta() {
 
   return (
     <section ref={section} id="close" aria-labelledby="close-title" className="relative flex min-h-[72svh] flex-col items-center justify-center overflow-hidden px-6 pb-[8svh] pt-[16svh] text-center">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_40%_at_50%_60%,rgb(216_192_138/0.16),transparent_70%)]" />
+      <div className="pointer-events-none absolute bottom-0 left-[max(0px,calc(50%-40rem))] hidden w-[300px] lg:block xl:w-[360px]" aria-hidden="true">
+        <Mascot pose="hero" alt="" width={360} />
+      </div>
       <ul ref={fan} className="relative mb-8 flex h-[130px] items-end justify-center" aria-label="The five demo cards">
         {vaultCards.map((c, i) => {
           const b = brandCardById.get(c.id)!;

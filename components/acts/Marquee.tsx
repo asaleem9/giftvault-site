@@ -8,7 +8,7 @@ export function Marquee() {
     <section aria-labelledby="stores-title" className="overflow-hidden py-[10svh]">
       <div className="mx-auto mb-8 w-[min(100%-2rem,72rem)]">
         <p className="eyebrow">Stores</p>
-        <h2 id="stores-title" className="mt-3 text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold tracking-[-0.02em]">38 stores built in, with their balance pages. Any card works.</h2>
+        <h2 id="stores-title" className="mt-3 text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold tracking-[-0.02em]">The stores you already shop at, with their balance pages built in. Any card works.</h2>
       </div>
       <div className="flex flex-col gap-3" aria-hidden="true">
         {rows.map((row, i) => (

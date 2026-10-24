@@ -58,10 +58,9 @@ export function Film() {
                 void v.play();
               }
             }}
-            className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-full bg-glass px-4 py-2 text-sm text-linen backdrop-blur-xl transition-colors hover:bg-surface-elevated"
+            className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-md bg-linen px-4 py-2 text-sm font-medium text-ground transition-colors hover:bg-brass"
           >
-            <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-brass" />
-            Play with sound
+                        Play with sound
           </button>
         ) : null}
       </div>

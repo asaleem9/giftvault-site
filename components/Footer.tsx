@@ -8,7 +8,7 @@ export function Footer({ theme = "dark" }: { theme?: "dark" | "paper" }) {
     <footer className={`mt-auto border-t px-6 py-10 text-sm ${paper ? "border-paper-hairline text-paper-mist" : "border-hairline text-mist"}`}>
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-col gap-2">
-          <Wordmark className={paper ? "text-paper-linen" : "text-linen"} />
+          <Wordmark className={paper ? "text-paper-linen [&>span:last-child]:text-paper-brass" : "text-linen"} />
           <p>Free. No accounts, no ads, no tracking.</p>
         </div>
         <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2">
