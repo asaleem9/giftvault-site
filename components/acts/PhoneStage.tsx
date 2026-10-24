@@ -81,7 +81,7 @@ export function PhoneStage() {
           </div>
           <ol className="order-3 hidden gap-3 md:flex md:flex-col" aria-label="Steps">
             {stages.map((s, i) => (
-              <li key={s.screen} className={`flex items-center gap-3 text-sm transition-colors ${i === index ? "text-linen" : "text-mist/60"}`}>
+              <li key={s.screen} className={`flex items-center gap-3 text-sm transition-colors ${i === index ? "text-linen" : "text-mist"}`}>
                 <span className={`h-px w-8 transition-all ${i === index ? "bg-brass w-12" : "bg-hairline"}`} aria-hidden="true" />
                 {s.eyebrow}
               </li>

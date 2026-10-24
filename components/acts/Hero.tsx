@@ -57,7 +57,7 @@ export function Hero() {
           <span className="mt-1 block text-sm text-mist">With the number right there, in case the scanner can't read screens.</span>
         </p>
 
-        <div aria-hidden="true" className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-xs uppercase tracking-[0.2em] text-mist/70">
+        <div aria-hidden="true" className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-xs uppercase tracking-[0.2em] text-mist">
           Scroll
         </div>
       </div>
