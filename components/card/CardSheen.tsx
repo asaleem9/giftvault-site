@@ -31,7 +31,8 @@ export function CardSheen({ flipRef, className = "" }: Props) {
     const w = window as Window & { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number };
     const idle = (cb: () => void) => (w.requestIdleCallback ? w.requestIdleCallback(cb, { timeout: 1200 }) : window.setTimeout(cb, 120));
 
-    idle(async () => {
+    const afterLoad = (cb: () => void) => (document.readyState === "complete" ? cb() : window.addEventListener("load", cb, { once: true }));
+    afterLoad(() => idle(async () => {
       try {
         const { createCardScene } = await import("@/lib/card-scene");
         if (cancelled || !canvasRef.current) return;
@@ -50,7 +51,7 @@ export function CardSheen({ flipRef, className = "" }: Props) {
       } catch {
         setStatus("fallback");
       }
-    });
+    }));
 
     const onPointer = (e: PointerEvent) => {
       const s = sceneRef.current;
@@ -98,7 +99,7 @@ export function CardSheen({ flipRef, className = "" }: Props) {
   return (
     <div className={className}>
       {status === "fallback" ? (
-        <div className="flex h-full w-full items-center justify-center"><CardSheenFallback /></div>
+        <div className="flex h-full w-full items-start justify-center pt-[12svh] sm:pt-[14svh]"><CardSheenFallback className="!w-[min(70vw,440px)]" /></div>
       ) : null}
       <canvas
         ref={canvasRef}

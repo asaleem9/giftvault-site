@@ -27,19 +27,31 @@ export function HyperframesPlayer({ src, poster, fallbackMp4, loop = true, mode 
   const [defined, setDefined] = useState(false);
   const [failed, setFailed] = useState(false);
 
+  const host = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (prefersReducedMotion()) {
       setFailed(true);
       return;
     }
     let cancelled = false;
-    import("@hyperframes/player")
-      .then(() => {
-        if (!cancelled) setDefined(true);
-      })
-      .catch(() => setFailed(true));
+    const el = host.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (!e.isIntersecting) return;
+        io.disconnect();
+        import("@hyperframes/player")
+          .then(() => {
+            if (!cancelled) setDefined(true);
+          })
+          .catch(() => setFailed(true));
+      },
+      { rootMargin: "60% 0px" },
+    );
+    io.observe(el);
     return () => {
       cancelled = true;
+      io.disconnect();
     };
   }, []);
 
@@ -69,13 +81,12 @@ export function HyperframesPlayer({ src, poster, fallbackMp4, loop = true, mode 
   }
 
   return (
-    <div className={`relative ${className}`} role="img" aria-label={label}>
+    <div ref={host} className={`relative ${className}`} role="img" aria-label={label}>
       <img src={poster} alt="" aria-hidden="true" className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${defined ? "opacity-0" : "opacity-100"}`} loading="lazy" decoding="async" />
       {defined ? (
         <hyperframes-player
           ref={ref}
           src={src}
-          poster={poster}
           muted=""
           loop={loop ? "" : undefined}
           controls={mode === "controls" ? "" : undefined}

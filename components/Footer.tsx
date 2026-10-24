@@ -18,7 +18,7 @@ export function Footer({ theme = "dark" }: { theme?: "dark" | "paper" }) {
           <a href={site.appStoreUrl} className="hover:underline">App Store</a>
         </nav>
       </div>
-      <p className="mx-auto mt-8 w-full max-w-6xl text-xs opacity-70">
+      <p className="mx-auto mt-8 w-full max-w-6xl text-xs">
         © {site.copyrightYear} GiftVault. Apple, the Apple logo, iPhone, Face ID and Apple Wallet are trademarks of Apple Inc. Store names belong to their owners;
         GiftVault is not affiliated with any of them.
       </p>

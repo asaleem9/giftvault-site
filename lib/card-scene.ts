@@ -142,9 +142,9 @@ export async function createCardScene(canvas: HTMLCanvasElement): Promise<CardSc
     const aspect = w / h;
     const wide = aspect > 1;
     const visibleWidthPerUnitZ = 2 * Math.tan((camera.fov * Math.PI) / 360); // per unit of distance, at aspect 1
-    camera.position.z = wide ? 8.2 : Math.min(18, Math.max(8.2, CARD_W / (visibleWidthPerUnitZ * aspect * 0.8)));
+    camera.position.z = wide ? 8.2 : Math.min(18, Math.max(8.2, CARD_W / (visibleWidthPerUnitZ * aspect * 0.74)));
     const visibleHeight = visibleWidthPerUnitZ * camera.position.z;
-    rig.position.y = (0.5 - (wide ? 0.4 : 0.33)) * visibleHeight;
+    rig.position.y = (0.5 - (wide ? 0.4 : 0.37)) * visibleHeight;
     camera.updateProjectionMatrix();
   };
   resize();

@@ -38,7 +38,7 @@ export function Cta() {
   }, []);
 
   return (
-    <section ref={section} id="close" aria-labelledby="close-title" className="relative flex min-h-[72svh] flex-col items-center justify-center overflow-hidden px-6 py-[8svh] text-center">
+    <section ref={section} id="close" aria-labelledby="close-title" className="relative flex min-h-[72svh] flex-col items-center justify-center overflow-hidden px-6 pb-[8svh] pt-[16svh] text-center">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_40%_at_50%_60%,rgb(216_192_138/0.16),transparent_70%)]" />
       <ul ref={fan} className="relative mb-8 flex h-[130px] items-end justify-center" aria-label="The five demo cards">
         {vaultCards.map((c, i) => {

@@ -51,7 +51,28 @@ export function ScrubVideo({ src, srcMobile, poster, endPoster, duration, trigge
       raf = requestAnimationFrame(loop);
     };
 
-    fetch(url, { signal: controller.signal })
+    const whenNear = new Promise<void>((resolve) => {
+      const target = triggerRef?.current ?? video.parentElement;
+      if (!target) return resolve();
+      const io = new IntersectionObserver(
+        ([e]) => {
+          if (e.isIntersecting) {
+            io.disconnect();
+            resolve();
+          }
+        },
+        { rootMargin: "150% 0px" },
+      );
+      io.observe(target);
+      controller.signal.addEventListener("abort", () => io.disconnect());
+    });
+    const whenLoaded = new Promise<void>((resolve) => {
+      if (document.readyState === "complete") resolve();
+      else window.addEventListener("load", () => resolve(), { once: true });
+    });
+
+    Promise.all([whenNear, whenLoaded])
+      .then(() => fetch(url, { signal: controller.signal }))
       .then((r) => r.blob())
       .then((blob) => {
         objectUrl = URL.createObjectURL(blob);
