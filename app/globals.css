@@ -120,3 +120,23 @@
 @keyframes screen-in-up { from { opacity: 0; transform: translateY(4%) scale(0.98); } }
 @keyframes screen-out-down { to { opacity: 0; transform: translateY(4%) scale(0.98); } }
 @keyframes screen-in-down { from { opacity: 0; transform: translateY(-4%) scale(0.98); } }
+
+/* Odometer digits: a column of 0–9 that slides to the value. */
+.odometer { line-height: 1; height: 1em; }
+.odometer-digit { display: inline-block; height: 1em; overflow: hidden; position: relative; width: 0.62em; }
+.odometer-sep { display: inline-block; height: 1em; }
+.odometer-col {
+  display: block; white-space: pre; line-height: 1; transform: translateY(0);
+  transition: transform 520ms var(--ease-out-expo);
+}
+.odometer-flash { animation: brass-flash 700ms ease-out both; }
+@keyframes brass-flash {
+  0% { color: var(--color-brass); text-shadow: 0 0 24px rgb(216 192 138 / 0.55); }
+  100% { color: inherit; text-shadow: none; }
+}
+@media (prefers-reduced-motion: reduce) { .odometer-col { transition: none; } }
+
+/* Marquee rows: translate half the strip width per cycle (the strip is duplicated). */
+.marquee { width: max-content; animation: marquee var(--marquee-duration, 60s) linear infinite; animation-direction: var(--marquee-dir, normal); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }

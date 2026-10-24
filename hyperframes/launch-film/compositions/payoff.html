@@ -1,0 +1,59 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; }
+    .title { position: absolute; left: 120px; right: 120px; color: #f1efe6; font-size: 84px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+    .title .w { display: inline-block; margin-right: 0.24em; }
+    .title .accent { color: #d8c08a; }
+    .quiet { position: absolute; left: 120px; color: #9db5a9; font-size: 36px; font-weight: 500; letter-spacing: -0.01em; }
+    .quiet .w { display: inline-block; margin-right: 0.28em; }
+    .phone { position: absolute; width: 440px; height: 920px; transform-origin: 50% 50%; }
+    .phone .body { position: absolute; inset: 0; border-radius: 64px; background: #0b1f19; border: 2px solid #24463c; box-shadow: 0 40px 120px rgba(0,0,0,0.55), inset 0 0 0 10px #0f2a22; }
+    .phone .screen { position: absolute; left: 13px; top: 13px; width: 414px; height: 894px; border-radius: 52px; background: #0f2a22; overflow: hidden; }
+    .phone .island { position: absolute; left: 50%; top: 30px; width: 112px; height: 32px; margin-left: -56px; border-radius: 20px; background: #000; z-index: 5; }
+    .phone .screen img, .phone .screen video { position: absolute; left: 0; top: 0; width: 414px; height: 894px; object-fit: cover; }
+    #payoff-cam { position: absolute; inset: 0; transform-origin: 1360px 540px; }
+    #payoff-phone { left: 1140px; top: 80px; }
+        #payoff-title { top: 380px; right: 860px; }
+    #payoff-sub { top: 600px; right: 860px; }
+    .ink .title { color: #1f2a24; }
+    .ink .title .accent { color: #8a6d2b; }
+    .ink .quiet { color: #5f7369; }
+  </style>
+  <div id="root" data-composition-id="payoff" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div id="payoff-stage" style="position:absolute;inset:0" data-layout-allow-overflow>
+      <div id="payoff-cam">
+        <div id="payoff-phone" class="phone">
+          <div class="body"></div>
+          <div class="screen">
+            <div class="island"></div>
+            <video id="payoff-video" src="assets/hurry-register.mp4" class="clip" muted playsinline data-track-index="1" data-start="0" data-duration="7" data-media-start="0.6"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="payoff-copy" class="clip ink" data-start="0.2" data-duration="6.8" data-track-index="2">
+      <h1 id="payoff-title" class="title">Show it at the register</h1>
+      <p id="payoff-sub" class="quiet">Tap a card: it flips to a bright barcode, with the number right there.</p>
+    </div>
+  </div>
+  <script>
+    function words(sel) { const el = document.querySelector(sel); el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(""); return el.querySelectorAll(".w"); }
+    function landTitle(tl, sel, at, accentIndex) { const ws = words(sel); if (accentIndex >= 0) ws[accentIndex].classList.add("accent"); tl.fromTo(ws, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.07, ease: "power2.out" }, at); return ws; }
+    function leaveTitle(tl, ws, at) { tl.to(ws, { opacity: 0, filter: "blur(8px)", duration: 0.18, stagger: 0.04, ease: "power2.in" }, at); }
+    const tl = gsap.timeline({ paused: true });
+    // The title starts linen on green, and switches to ink as the frame floods at 3.4 s (clip time).
+    const ws = landTitle(tl, "#payoff-title", 0.4, 4);
+    tl.fromTo(ws, { color: "#f1efe6" }, { color: "#1f2a24", duration: 0.4, ease: "power2.inOut" }, 3.4);
+    tl.fromTo(ws[4], { color: "#d8c08a" }, { color: "#8a6d2b", duration: 0.4, ease: "power2.inOut" }, 3.4);
+    const sub = words("#payoff-sub");
+    tl.fromTo(sub, { opacity: 0, filter: "blur(6px)", color: "#9db5a9" }, { opacity: 1, filter: "blur(0px)", color: "#9db5a9", duration: 0.13, stagger: 0.05, ease: "power2.out" }, 1.0);
+    tl.to(sub, { color: "#5f7369", duration: 0.4, ease: "power2.inOut" }, 3.4);
+    // The flip is the payoff: the camera pushes in with it and holds.
+    tl.fromTo("#payoff-cam", { scale: 1, x: 0, y: 0 }, { scale: 1.18, x: 0, y: 70, duration: 0.6, ease: "power2.inOut" }, 3.2);
+    tl.to("#payoff-phone .body", { backgroundColor: "#e6e9e3", borderColor: "#d9dfd9", boxShadow: "0 40px 120px rgba(0,0,0,0.25), inset 0 0 0 10px #eef2ec", duration: 0.4, ease: "power2.inOut" }, 3.4);
+    tl.to("#payoff-cam", { scale: 1, x: 0, y: 0, duration: 0.5, ease: "power2.inOut" }, 6.3);
+    tl.to("#payoff-phone", { y: 80, opacity: 0, duration: 0.35, ease: "power3.in" }, 6.6);
+    tl.to([ws, sub], { opacity: 0, duration: 0.3, ease: "power2.in" }, 6.5);
+    window.__timelines["payoff"] = tl;
+  </script>
+</template>

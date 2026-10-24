@@ -84,7 +84,7 @@ export function ScrubVideo({ src, srcMobile, poster, endPoster, duration, trigge
   }, [src, srcMobile, duration, triggerRef, onProgress]);
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={className}>
       <img
         src={reduced && endPoster ? endPoster : poster}
         alt=""

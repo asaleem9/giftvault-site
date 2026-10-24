@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --ground: #0f2a22;
+        --surface: #163730;
+        --surface-elevated: #1d453c;
+        --brass: #d8c08a;
+        --brass-ink: #2a2410;
+        --linen: #f1efe6;
+        --mist: #9db5a9;
+        --hairline: #24463c;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 100%; height: 100%; font-family: Inter, sans-serif; overflow: hidden; }
+      #ground {
+        position: absolute; inset: 0;
+        background:
+          radial-gradient(1200px 800px at 62% 50%, rgba(29, 69, 60, 0.9) 0%, rgba(22, 55, 48, 0.6) 35%, rgba(15, 42, 34, 0) 70%),
+          var(--ground);
+      }
+      /* Phone silhouette */
+      #phone { position: absolute; left: 1140px; top: 80px; width: 440px; height: 920px; }
+      #phone-body {
+        position: absolute; inset: 0; border-radius: 64px; background: #0b1f19;
+        border: 2px solid var(--hairline);
+        box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55), inset 0 0 0 10px #0f2a22;
+      }
+      #phone-screen {
+        position: absolute; left: 13px; top: 13px; width: 414px; height: 894px; border-radius: 52px;
+        background: var(--ground); overflow: hidden;
+      }
+      #phone-island { position: absolute; left: 50%; top: 30px; width: 112px; height: 32px; margin-left: -56px; border-radius: 20px; background: #000; z-index: 5; }
+      #phone-header { position: absolute; left: 16px; top: 112px; color: var(--linen); }
+      #phone-header .title { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
+      #phone-header .eyebrow { margin-top: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: var(--mist); }
+      #phone-header .total { margin-top: 0; font-size: 44px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+      #shot { position: absolute; inset: 0; width: 414px; height: 894px; object-fit: cover; z-index: 6; }
+      /* Cards */
+      .slot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+      .card {
+        position: absolute; left: 0; top: 0; width: 384px; height: 180px; border-radius: 24px;
+        background: linear-gradient(135deg, var(--start), var(--end));
+        color: var(--ink);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        transform-origin: 50% 50%;
+        will-change: transform;
+      }
+      .card::before {
+        content: ""; position: absolute; inset: 0; border-radius: inherit;
+        background: radial-gradient(260px 160px at 22% 18%, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 70%);
+      }
+      .card .name { position: absolute; left: 26px; top: 22px; font-size: 26px; font-weight: 600; letter-spacing: -0.01em; }
+      .card .bal { position: absolute; right: 26px; top: 18px; font-size: 32px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+      .card .last { position: absolute; left: 26px; bottom: 18px; font-size: 15px; letter-spacing: 0.18em; opacity: 0.85; }
+      .card .kind { position: absolute; right: 26px; bottom: 18px; font-size: 11px; letter-spacing: 0.2em; opacity: 0.85; }
+      /* Brass light sweep */
+      #sweep { position: absolute; inset: 0; overflow: hidden; z-index: 20; mix-blend-mode: screen; }
+      #sweep-band, #sweep-band2 {
+        position: absolute; left: -700px; top: -200px; width: 520px; height: 1500px;
+        background: linear-gradient(90deg, rgba(216, 192, 138, 0) 0%, rgba(216, 192, 138, 0.22) 45%, rgba(241, 239, 230, 0.34) 50%, rgba(216, 192, 138, 0.22) 55%, rgba(216, 192, 138, 0) 100%);
+        transform: rotate(18deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="5" data-width="1920" data-height="1080" data-layout-allow-overlap>
+      <div id="ground"></div>
+
+      <div id="phone" class="clip" data-start="0" data-duration="5" data-track-index="1">
+        <div id="phone-inner" style="position:absolute;inset:0;">
+          <div id="phone-body"></div>
+          <div id="phone-screen">
+            <div id="phone-island"></div>
+            <div id="phone-header" data-layout-allow-occlusion>
+              <div class="title">Cards</div>
+              <div class="eyebrow">TOTAL ACROSS 5 CARDS</div>
+              <div class="total">$387.40</div>
+            </div>
+            <img id="shot" src="assets/cards-1260.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div id="cards" class="clip" data-start="0" data-duration="5" data-track-index="2" data-layout-allow-overflow></div>
+
+      <div id="sweep" class="clip" data-start="0" data-duration="5" data-track-index="3" data-layout-ignore>
+        <div id="sweep-band"></div>
+      <div id="sweep-band2"></div>
+      </div>
+    </div>
+
+    <script>
+      // Deterministic: everything below is a function of timeline time only.
+      function mulberry32(a) {
+        return function () {
+          a |= 0; a = (a + 0x6d2b79f5) | 0;
+          let t = Math.imul(a ^ (a >>> 15), 1 | a);
+          t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+      const rand = mulberry32(20261024);
+
+      // The five demo cards land in the app's stack order; the rest tuck underneath.
+      const stack = [
+        { name: "Starbucks", bal: "$42.10", start: "#1E8A5A", end: "#0B4A2E", ink: "#FFFFFF", last: "4471" },
+        { name: "Target", bal: "$25.00", start: "#E0343A", end: "#8F1419", ink: "#FFFFFF", last: "0123" },
+        { name: "DoorDash", bal: "$100.00", start: "#FF5A3C", end: "#C62A14", ink: "#FFFFFF", last: "8810" },
+        { name: "Amazon", bal: "$145.30", start: "#FFB547", end: "#E27B00", ink: "#1A1200", last: "2209" },
+        { name: "The Home Depot", bal: "$75.00", start: "#F7A13B", end: "#D9680A", ink: "#FFFFFF", last: "5531" },
+      ];
+      const others = [
+        { name: "Walmart", bal: "$60.00", start: "#2E6FE0", end: "#0E3C94", ink: "#FFFFFF", last: "7712" },
+        { name: "Sephora", bal: "$50.00", start: "#2B2B2B", end: "#0A0A0A", ink: "#FFFFFF", last: "3456" },
+        { name: "Costco", bal: "$200.00", start: "#E31837", end: "#8C0F22", ink: "#FFFFFF", last: "9090" },
+        { name: "Best Buy", bal: "$35.00", start: "#FFE000", end: "#C7A800", ink: "#1A1200", last: "1138" },
+        { name: "Apple", bal: "$100.00", start: "#4B4B4B", end: "#111111", ink: "#FFFFFF", last: "2211" },
+        { name: "Nike", bal: "$80.00", start: "#1E1E1E", end: "#000000", ink: "#FFFFFF", last: "6060" },
+        { name: "Spotify", bal: "$30.00", start: "#1ED760", end: "#0E7A36", ink: "#0B1A12", last: "4040" },
+        { name: "Chipotle", bal: "$25.00", start: "#A81612", end: "#5E0B09", ink: "#FFFFFF", last: "1313" },
+        { name: "Ulta", bal: "$45.00", start: "#F26E8A", end: "#B5304E", ink: "#FFFFFF", last: "7777" },
+      ];
+
+      const host = document.getElementById("cards");
+      const specs = [];
+      // Scatter: a drawer dumped out across the left two thirds and under the phone.
+      const all = [...others, ...stack];
+      all.forEach((c, i) => {
+        const slot = document.createElement("div");
+        slot.className = "slot";
+        const el = document.createElement("div");
+        el.className = "card";
+        el.setAttribute("data-layout-ignore", "");
+        el.id = "card-" + i;
+        el.style.setProperty("--start", c.start);
+        el.style.setProperty("--end", c.end);
+        el.style.setProperty("--ink", c.ink);
+        el.innerHTML = `<div class="name">${c.name}</div><div class="bal">${c.bal}</div><div class="last">•••• ${c.last}</div><div class="kind">GIFT CARD</div>`;
+        slot.appendChild(el);
+        host.appendChild(slot);
+        const col = i % 5, row = Math.floor(i / 5);
+        const sx = 40 + col * 350 + rand() * 140 - 70 + (row % 2) * 110;
+        const sy = 60 + row * 300 + rand() * 160 - 80;
+        const sr = (rand() - 0.5) * 70;
+        specs.push({ el, sx, sy, sr, isStack: i >= others.length, order: i - others.length });
+      });
+
+      const tl = gsap.timeline({ paused: true });
+
+      // Phone: arrives while the cards are still scattered, so they have somewhere to go.
+      tl.fromTo("#phone-inner", { opacity: 0, scale: 0.9, y: 60 }, { opacity: 1, scale: 1, y: 0, duration: 1.0, ease: "expo.out" }, 0.9);
+      tl.fromTo("#phone-header", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 1.5);
+      // The real screenshot takes over at the end, so the last frame is the app.
+      tl.fromTo("#shot", { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power2.inOut" }, 4.3);
+
+      // Cards: rest scattered, then gather. Stack cards land last, on top, in the app's order.
+      const screenLeft = 1140 + 13, screenTop = 80 + 13;
+      specs.forEach((s, i) => {
+        const z = s.isStack ? 100 + s.order : 10 + i;
+        s.el.style.zIndex = z;
+        gsap.set(s.el, { x: s.sx, y: s.sy, rotation: s.sr, scale: 1 });
+        if (s.isStack) {
+          const fx = screenLeft + 15, fy = screenTop + 249 + s.order * 86;
+          tl.fromTo(s.el, { x: s.sx, y: s.sy, rotation: s.sr, scale: 1 },
+            { x: fx, y: fy, rotation: 0, scale: 1, duration: 1.7, ease: "power3.inOut" }, 1.9 + s.order * 0.09);
+          tl.to(s.el, { rotation: 0, duration: 0.3, ease: "back.out(1.6)" }, 3.6 + s.order * 0.09);
+        } else {
+          const fx = screenLeft + 15 + (rand() - 0.5) * 30, fy = screenTop + 320 + (rand() - 0.5) * 200;
+          tl.fromTo(s.el, { x: s.sx, y: s.sy, rotation: s.sr, scale: 1, opacity: 1 },
+            { x: fx, y: fy, rotation: (rand() - 0.5) * 8, scale: 0.86, opacity: 0, duration: 1.5, ease: "power3.inOut" }, 1.4 + i * 0.07);
+        }
+      });
+
+      // One brass key light crosses the drawer, then a second quiet pass over the phone.
+      tl.fromTo("#sweep-band", { x: 0 }, { x: 2900, duration: 1.5, ease: "power2.inOut" }, 0.15);
+      tl.fromTo("#sweep-band2", { x: 1400, opacity: 0.5 }, { x: 2900, opacity: 0.5, duration: 1.1, ease: "power2.inOut" }, 3.7);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

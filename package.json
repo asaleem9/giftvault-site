@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "assets": "node scripts/extract-brand.mjs && node scripts/build-images.mjs && node scripts/build-clips.mjs",
+    "media": "node scripts/build-media.mjs",
+    "shoot": "node scripts/shoot.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@hyperframes/player": "^0.8.192",

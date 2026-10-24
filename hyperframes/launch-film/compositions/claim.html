@@ -1,0 +1,28 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: Inter, sans-serif; }
+    .title { position: absolute; left: 120px; right: 120px; color: #f1efe6; font-size: 84px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+    .title .w { display: inline-block; margin-right: 0.24em; }
+    .title .accent { color: #d8c08a; }
+    .quiet { position: absolute; left: 120px; color: #9db5a9; font-size: 36px; font-weight: 500; letter-spacing: -0.01em; }
+    .quiet .w { display: inline-block; margin-right: 0.28em; }
+    #claim-1 { top: 380px; font-size: 92px; }
+    #claim-2 { top: 520px; font-size: 92px; }
+  </style>
+  <div id="root" data-composition-id="claim" data-width="1920" data-height="1080">
+    <div id="claim-slot" class="clip" data-start="0" data-duration="4.5" data-track-index="1">
+      <h1 id="claim-1" class="title">No store lets apps read balances.</h1>
+      <h1 id="claim-2" class="title">GiftVault doesn't pretend to.</h1>
+    </div>
+  </div>
+  <script>
+    function words(sel) { const el = document.querySelector(sel); el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(""); return el.querySelectorAll(".w"); }
+    function landTitle(tl, sel, at, accentIndex) { const ws = words(sel); if (accentIndex >= 0) ws[accentIndex].classList.add("accent"); tl.fromTo(ws, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.07, ease: "power2.out" }, at); return ws; }
+    function leaveTitle(tl, ws, at) { tl.to(ws, { opacity: 0, filter: "blur(8px)", duration: 0.18, stagger: 0.04, ease: "power2.in" }, at); }
+    const tl = gsap.timeline({ paused: true });
+    const a = landTitle(tl, "#claim-1", 0.3, -1);
+    const b = landTitle(tl, "#claim-2", 2.2, 1);
+    // Both lines hold to the end; the end card takes over.
+    window.__timelines["claim"] = tl;
+  </script>
+</template>

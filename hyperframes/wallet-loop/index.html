@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280, height=720" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root { --ground: #0f2a22; --surface: #163730; --surface-elevated: #1d453c; --brass: #d8c08a; --brass-ink: #2a2410; --linen: #f1efe6; --mist: #9db5a9; --hairline: #24463c; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1280px; height: 720px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 100%; height: 100%; font-family: Inter, sans-serif; color: var(--linen); overflow: hidden; }
+      #ground { position: absolute; inset: 0; background: radial-gradient(900px 700px at 50% 40%, rgba(29,69,60,0.85), rgba(15,42,34,0) 70%), var(--ground); }
+      /* The Wallet stack: three passes already in the wallet, ours arrives on top. */
+      .pass { position: absolute; left: 340px; width: 600px; height: 380px; border-radius: 30px; box-shadow: 0 30px 70px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.1); overflow: hidden; }
+      #p1 { top: 120px; background: linear-gradient(135deg, #2b2b2b, #0a0a0a); }
+      #p2 { top: 180px; background: linear-gradient(135deg, #2E6FE0, #0E3C94); }
+      #p3 { top: 240px; background: linear-gradient(135deg, #E0343A, #8F1419); }
+      .pass .label { position: absolute; left: 28px; top: 22px; font-size: 20px; font-weight: 600; color: rgba(255,255,255,0.92); }
+      #ours { top: 300px; background: var(--surface); border: 1px solid var(--hairline); }
+      #ours .strip { position: absolute; left: 0; top: 0; right: 0; height: 14px; background: var(--brass); }
+      #ours .head { position: absolute; left: 28px; top: 34px; right: 28px; display: flex; justify-content: space-between; align-items: baseline; }
+      #ours .org { font-size: 15px; font-weight: 600; letter-spacing: 0.16em; color: var(--mist); }
+      #ours .store { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; margin-top: 6px; }
+      #ours .bal-l { font-size: 15px; font-weight: 600; letter-spacing: 0.16em; color: var(--mist); text-align: right; }
+      #ours .bal { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; text-align: right; }
+      #ours .code { position: absolute; left: 28px; right: 28px; bottom: 26px; height: 150px; border-radius: 16px; background: #fff; padding: 18px 22px 12px; }
+      #ours .bars { display: flex; align-items: stretch; height: 84px; gap: 0; }
+      #ours .bars i { display: block; background: #111; height: 100%; }
+      #ours .num { margin-top: 10px; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 18px; color: #333; letter-spacing: 0.12em; }
+      #sheen { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; }
+      #sheen-band { position: absolute; left: -500px; top: -300px; width: 360px; height: 1400px; transform: rotate(22deg);
+        background: linear-gradient(90deg, rgba(241,239,230,0) 0%, rgba(241,239,230,0.18) 50%, rgba(241,239,230,0) 100%); }
+      #added { position: absolute; left: 50%; top: 56px; width: 420px; margin-left: -210px; height: 60px; border-radius: 30px; background: rgba(241,239,230,0.96); color: #1f2a24; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 22px; font-weight: 600; box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
+      #added .check { width: 26px; height: 26px; border-radius: 13px; background: #3e7c5a; position: relative; }
+      #added .check::after { content: ""; position: absolute; left: 9px; top: 5px; width: 6px; height: 12px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(45deg); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="7" data-width="1280" data-height="720" data-layout-allow-overlap>
+      <div id="ground"></div>
+      <div id="stack" class="clip" data-start="0" data-duration="7" data-track-index="1" style="position:absolute;inset:0;" data-layout-allow-overflow>
+        <div class="pass" id="p1" data-layout-ignore><div class="label">Boarding pass</div></div>
+        <div class="pass" id="p2" data-layout-ignore><div class="label">Transit card</div></div>
+        <div class="pass" id="p3" data-layout-ignore><div class="label">Loyalty card</div></div>
+        <div class="pass" id="ours">
+          <div class="strip"></div>
+          <div class="head">
+            <div><div class="org">GIFTVAULT · STORE CARD</div><div class="store">Starbucks</div></div>
+            <div><div class="bal-l">BALANCE</div><div class="bal">$42.10</div></div>
+          </div>
+          <div class="code" data-layout-ignore>
+            <div class="bars" id="bars"></div>
+            <div class="num">6011 2345 6789 4471</div>
+          </div>
+        </div>
+      </div>
+      <div id="sheen" class="clip" data-start="0" data-duration="7" data-track-index="2" data-layout-ignore><div id="sheen-band"></div></div>
+      <div id="added-slot" class="clip" data-start="0" data-duration="7" data-track-index="3" style="position:absolute;inset:0;pointer-events:none;">
+        <div id="added"><div class="check"></div><span>Added to Apple Wallet</span></div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      // A Code 128-looking bar pattern from a fixed seed (texture, not a real code).
+      function mulberry32(a) { return function () { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+      const r = mulberry32(4471);
+      const bars = document.getElementById("bars");
+      let html = "";
+      for (let i = 0; i < 70; i++) { const w = 2 + Math.floor(r() * 4); const gap = 2 + Math.floor(r() * 3); html += `<i style="width:${w}px;margin-right:${gap}px"></i>`; }
+      bars.innerHTML = html;
+
+      const tl = gsap.timeline({ paused: true });
+      // Our pass rises from below the frame, overshoots a touch, and settles on the stack.
+      tl.fromTo("#ours", { y: 560, rotation: 2 }, { y: 0, rotation: 0, duration: 1.3, ease: "elastic.out(1, 0.8)" }, 0.3);
+      // The stack behind makes room: each pass shifts down a little as ours lands.
+      tl.fromTo("#p1", { y: 60 }, { y: 0, duration: 1.0, ease: "power3.out" }, 0.55);
+      tl.fromTo("#p2", { y: 60 }, { y: 0, duration: 1.0, ease: "power3.out" }, 0.6);
+      tl.fromTo("#p3", { y: 60 }, { y: 0, duration: 1.0, ease: "power3.out" }, 0.65);
+      // One sheen crosses the landed pass.
+      tl.fromTo("#sheen-band", { x: 0 }, { x: 2000, duration: 1.2, ease: "power2.inOut" }, 1.5);
+      // Confirmation chip.
+      tl.fromTo("#added", { y: -120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "elastic.out(1, 0.75)" }, 1.8);
+      tl.to("#added", { y: -120, opacity: 0, duration: 0.4, ease: "power3.in" }, 4.6);
+      // Loop seam: the pass slides back out, the stack closes up, ready for frame 0.
+      tl.to("#ours", { y: 560, rotation: 2, duration: 0.6, ease: "power3.in" }, 6.0);
+      tl.to(["#p1", "#p2", "#p3"], { y: 60, duration: 0.5, ease: "power2.inOut" }, 6.2);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

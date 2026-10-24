@@ -1,0 +1,33 @@
+import { brandCards } from "@/lib/brand-cards";
+
+/** The 38 stores in the catalog, as colour chips with plain names (no logos). Two rows drift in opposite directions. */
+export function Marquee() {
+  const half = Math.ceil(brandCards.length / 2);
+  const rows = [brandCards.slice(0, half), brandCards.slice(half)];
+  return (
+    <section aria-labelledby="stores-title" className="overflow-hidden py-[10svh]">
+      <div className="mx-auto mb-8 w-[min(100%-2rem,72rem)]">
+        <p className="eyebrow">Stores</p>
+        <h2 id="stores-title" className="mt-3 text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold tracking-[-0.02em]">38 stores built in, with their balance pages. Any card works.</h2>
+      </div>
+      <div className="flex flex-col gap-3" aria-hidden="true">
+        {rows.map((row, i) => (
+          <div key={i} className="marquee flex gap-3" style={{ "--marquee-duration": `${60 + i * 12}s`, "--marquee-dir": i ? "reverse" : "normal" } as React.CSSProperties}>
+            {[...row, ...row].map((c, j) => (
+              <span
+                key={`${c.id}-${j}`}
+                className="inline-flex shrink-0 items-center gap-2 rounded-full border border-hairline bg-surface px-3 py-1.5 text-sm text-linen"
+              >
+                <span className="h-4 w-6 rounded-[4px]" style={{ background: `linear-gradient(135deg, ${c.start}, ${c.end})` }} />
+                {c.name}
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+      <ul className="sr-only">
+        {brandCards.map((c) => <li key={c.id}>{c.name}</li>)}
+      </ul>
+    </section>
+  );
+}
