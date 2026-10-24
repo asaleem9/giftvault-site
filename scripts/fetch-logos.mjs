@@ -6,7 +6,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve, join } from "node:path";
 
 const appDir = process.env.GIFTVAULT_APP_DIR ?? resolve(process.cwd(), "../giftcard-manager");
-const catalog = JSON.parse(readFileSync(join(appDir, "GiftVault/Packages/GiftVaultCore/Sources/GiftVaultCore/Resources/merchants.json"), "utf8"));
+const catalog = JSON.parse(readFileSync(process.env.CATALOG ?? join(appDir, "GiftVault/Packages/GiftVaultCore/Sources/GiftVaultCore/Resources/merchants.json"), "utf8"));
 const siteOut = resolve(process.cwd(), "public/logos");
 const appOut = join(appDir, "GiftVault/Packages/GiftVaultCore/Sources/GiftVaultCore/Resources/Logos");
 mkdirSync(siteOut, { recursive: true });
@@ -19,11 +19,33 @@ async function get(url) {
     if (!r.ok) return null;
     const buf = Buffer.from(await r.arrayBuffer());
     const meta = await sharp(buf).metadata().catch(() => null);
-    if (!meta || !meta.width || meta.width < 48) return null;
+    if (!meta || !meta.width || meta.width < 32) return null;
     return { buf, size: meta.width };
   } catch {
     return null;
   }
+}
+
+/** Icons the homepage declares (apple-touch-icon, icon, og:image), largest declared size first. */
+async function declaredIcons(domain) {
+  for (const origin of [`https://www.${domain}`, `https://${domain}`]) {
+    try {
+      const r = await fetch(origin, { redirect: "follow", signal: AbortSignal.timeout(10000), headers: { "user-agent": "Mozilla/5.0 (Macintosh) AppleWebKit/605 (KHTML, like Gecko) Safari/605", accept: "text/html" } });
+      if (!r.ok) continue;
+      const html = (await r.text()).slice(0, 400000);
+      const links = [...html.matchAll(/<link[^>]+>/gi)].map((x) => x[0]).filter((t) => /rel=["'][^"']*(apple-touch-icon|icon)/i.test(t));
+      const scored = links.map((t) => {
+        const href = /href=["']([^"']+)["']/i.exec(t)?.[1];
+        const size = Number(/sizes=["'](\d+)x/i.exec(t)?.[1] ?? (/apple-touch-icon/i.test(t) ? 180 : 32));
+        return href ? { href, size } : null;
+      }).filter(Boolean).sort((a, b) => b.size - a.size);
+      const urls = scored.filter((x) => !/\.ico(\?|$)/i.test(x.href) && !/\.svg(\?|$)/i.test(x.href)).map((x) => new URL(x.href, r.url).toString());
+      if (urls.length) return urls.slice(0, 3);
+    } catch {
+      /* try the next origin */
+    }
+  }
+  return [];
 }
 
 const report = [];
@@ -33,6 +55,7 @@ for (const m of catalog) {
   const target = join(siteOut, `${m.id}.png`);
   if (existsSync(target) && !process.env.REFRESH) continue;
   const candidates = [
+    ...(await declaredIcons(m.domain)),
     `https://${m.domain}/apple-touch-icon.png`,
     `https://www.${m.domain}/apple-touch-icon.png`,
     `https://${m.domain}/apple-touch-icon-precomposed.png`,
