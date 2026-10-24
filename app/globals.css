@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Bottle & Brass. Dark is the material of the site; "paper" is the legal pages. */
+@theme {
+  --color-ground: #0f2a22;
+  --color-surface: #163730;
+  --color-surface-elevated: #1d453c;
+  --color-brass: #d8c08a;
+  --color-brass-ink: #2a2410;
+  --color-fern: #6fa98b;
+  --color-linen: #f1efe6;
+  --color-mist: #9db5a9;
+  --color-hairline: #24463c;
+  --color-glass: rgb(22 55 48 / 0.66);
+
+  --color-paper-ground: #eef2ec;
+  --color-paper-surface: #ffffff;
+  --color-paper-brass: #8a6d2b;
+  --color-paper-linen: #1f2a24;
+  --color-paper-mist: #5f7369;
+  --color-paper-hairline: #d9dfd9;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: linear(0, 0.006, 0.025 2.8%, 0.101 6.1%, 0.539 18.9%, 0.721 25.3%, 0.849 31.5%, 0.937 38.1%, 0.968 41.8%, 0.991 45.7%, 1.006 50.1%, 1.012 55.5%, 1.01 61.5%, 1.004 70.1%, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
+    --sc-p: 0;
+  }
+  html {
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-ground);
+    color: var(--color-linen);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    overflow-x: clip;
+  }
+  [data-theme="paper"] {
+    color-scheme: light;
+    background: var(--color-paper-ground);
+    color: var(--color-paper-linen);
+  }
+  ::selection {
+    background: var(--color-brass);
+    color: var(--color-brass-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-mist);
 }
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility hairline-top {
+  border-top: 1px solid var(--color-hairline);
+}
+
+/* Scroll-driven reveals (CSS scroll timelines; Firefox 159+ / Chrome / Safari). Fallback: visible. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+  }
+}
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Top progress hairline driven by the document scroll timeline. */
+@supports (animation-timeline: scroll()) {
+  .progress-hairline {
+    transform-origin: left;
+    animation: grow-x linear both;
+    animation-timeline: scroll(root);
+  }
+}
+@keyframes grow-x {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* View Transition classes for the phone screen swaps (React 19.3 <ViewTransition>). */
+::view-transition-old(screen-forward) { animation: screen-out-up 420ms var(--ease-out-expo) both; }
+::view-transition-new(screen-forward) { animation: screen-in-up 420ms var(--ease-out-expo) both; }
+::view-transition-old(screen-back) { animation: screen-out-down 420ms var(--ease-out-expo) both; }
+::view-transition-new(screen-back) { animation: screen-in-down 420ms var(--ease-out-expo) both; }
+@keyframes screen-out-up { to { opacity: 0; transform: translateY(-4%) scale(0.98); } }
+@keyframes screen-in-up { from { opacity: 0; transform: translateY(4%) scale(0.98); } }
+@keyframes screen-out-down { to { opacity: 0; transform: translateY(4%) scale(0.98); } }
+@keyframes screen-in-down { from { opacity: 0; transform: translateY(-4%) scale(0.98); } }
