@@ -1,4 +1,5 @@
 import { brandCards } from "@/lib/brand-cards";
+import { BrandLogo } from "@/components/BrandLogo";
 
 /** The 38 stores in the catalog, as colour chips with plain names (no logos). Two rows drift in opposite directions. */
 export function Marquee() {
@@ -18,7 +19,7 @@ export function Marquee() {
                 key={`${c.id}-${j}`}
                 className="inline-flex shrink-0 items-center gap-2 rounded-full border border-hairline bg-surface px-3 py-1.5 text-sm text-linen"
               >
-                <span className="h-4 w-6 rounded-[4px]" style={{ background: `linear-gradient(135deg, ${c.start}, ${c.end})` }} />
+                <BrandLogo id={c.id} name={c.name} size={18} />
                 {c.name}
               </span>
             ))}

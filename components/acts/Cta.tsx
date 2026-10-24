@@ -7,6 +7,7 @@ import { brandCardById } from "@/lib/brand-cards";
 import { ensureGsap, prefersReducedMotion } from "@/lib/scroll";
 import { vaultCards, vaultTotal } from "@/components/vault/Vault";
 import { Mascot } from "@/components/Mascot";
+import { BrandLogo } from "@/components/BrandLogo";
 
 const fmt = (c: number) => `$${(c / 100).toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
 
@@ -52,7 +53,7 @@ export function Cta() {
               className="absolute bottom-0 flex h-[120px] w-[190px] flex-col justify-between rounded-2xl p-4 text-left shadow-[0_30px_60px_-24px_rgb(0_0_0/0.7)]"
               style={{ background: `linear-gradient(135deg, ${b.start}, ${b.end})`, color: b.ink, left: `calc(50% - 95px + ${(i - 2) * 48}px)`, zIndex: i, transformOrigin: "50% 120%" }}
             >
-              <span className="text-sm font-semibold">{b.name}</span>
+              <span className="flex items-center gap-2 text-sm font-semibold"><BrandLogo id={b.id} name={b.name} size={20} />{b.name}</span>
               <span className="tabular self-end font-mono text-lg font-semibold">{fmt(c.cents)}</span>
             </li>
           );

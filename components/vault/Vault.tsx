@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { brandCardById } from "@/lib/brand-cards";
+import { BrandLogo } from "@/components/BrandLogo";
 import { ensureGsap, prefersReducedMotion } from "@/lib/scroll";
 
 /** The five demo cards, in the app's order. Each act of the page drops one onto the visitor's vault. */
@@ -105,7 +106,7 @@ export function Vault() {
                   tabIndex={on ? 0 : -1}
                   aria-hidden={!on}
                 >
-                  <span>{brand.name}</span>
+                  <span className="flex items-center gap-1.5"><BrandLogo id={c.id} name={brand.name} size={14} />{brand.name}</span>
                   <span className="tabular font-mono">{fmt(c.cents)}</span>
                 </a>
               </li>

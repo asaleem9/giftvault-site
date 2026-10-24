@@ -57,21 +57,21 @@ export function Bento() {
         </Tile>
 
         <Tile className="sm:col-span-2" eyebrow="Scan" title="Point the camera. Barcode, number and PIN in one pass." body="Code 128, QR, PDF417, Aztec, EAN-13, UPC-A and ITF. Or import a photo, or type it.">
-          <div className="grid h-56 grid-cols-2 gap-4 px-5 pt-5">
-            <div className="overflow-hidden rounded-t-2xl border border-b-0 border-hairline"><Clip name="add-card" label="Adding a Sephora card by hand" /></div>
-            <div className="overflow-hidden rounded-t-2xl border border-b-0 border-hairline"><Clip name="spend" label="Logging a purchase and watching the balance update" /></div>
+          <div className="grid h-56 grid-cols-2 gap-4 overflow-hidden px-5 pt-5">
+            <div className="h-full overflow-hidden rounded-t-2xl border border-b-0 border-hairline"><Clip name="add-card" label="Adding a Sephora card by hand" /></div>
+            <div className="h-full overflow-hidden rounded-t-2xl border border-b-0 border-hairline"><Clip name="spend" label="Logging a purchase and watching the balance update" /></div>
           </div>
         </Tile>
 
         <Tile eyebrow="Light and dark" title="Follows your phone." body="Bottle green at night, linen by day. The barcode is always black on white.">
-          <div className="flex h-56 justify-center px-5 pt-5">
-            <div className="w-40 overflow-hidden rounded-t-2xl border border-b-0 border-hairline"><Clip name="hurry-register" label="Light mode: from the list to the barcode in two taps" /></div>
+          <div className="flex h-56 justify-center overflow-hidden px-5 pt-5">
+            <div className="h-full w-40 overflow-hidden rounded-t-2xl border border-b-0 border-hairline"><Clip name="hurry-register" label="Light mode: from the list to the barcode in two taps" /></div>
           </div>
         </Tile>
 
         <Tile eyebrow="iPhone Duo" title="Unfolds with the phone." body="Layout keys off the display, not the device. The tab bar becomes a sidebar on the inner screen.">
-          <div className="flex h-56 items-center justify-center p-5">
-            <div className="w-full overflow-hidden rounded-2xl border border-hairline"><Clip name="duo" label="GiftVault on the iPhone Duo outer display" /></div>
+          <div className="flex h-56 items-start justify-center overflow-hidden px-5 pt-5">
+            <div className="h-full w-full overflow-hidden rounded-t-2xl border border-b-0 border-hairline"><Clip name="duo" label="GiftVault on the iPhone Duo outer display" /></div>
           </div>
         </Tile>
 
