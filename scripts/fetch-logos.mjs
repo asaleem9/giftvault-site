@@ -69,8 +69,8 @@ for (const m of catalog) {
     if (best && best.size >= 160) break;
   }
   if (!best) { report.push(`${m.id}: no icon found for ${m.domain}`); continue; }
-  // Normalise: square, 256 px, keep alpha, flatten tiny icons on white so dark marks stay visible on dark cards.
-  const png = await sharp(best.buf).resize(256, 256, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
+  // Normalise: square 128 px (badges render at 20–28 pt), keep alpha, palette PNG to keep the app bundle small.
+  const png = await sharp(best.buf).resize(128, 128, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).png({ palette: true, compressionLevel: 9 }).toBuffer();
   writeFileSync(target, png);
   writeFileSync(join(appOut, `logo-${m.id}.png`), png);
   report.push(`${m.id}: ${best.size}px from ${new URL(best.url).host}`);

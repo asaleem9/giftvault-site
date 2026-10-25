@@ -3,8 +3,9 @@ import { BrandLogo } from "@/components/BrandLogo";
 
 /** The 38 stores in the catalog, as colour chips with plain names (no logos). Two rows drift in opposite directions. */
 export function Marquee() {
-  const half = Math.ceil(brandCards.length / 2);
-  const rows = [brandCards.slice(0, half), brandCards.slice(half)];
+  // Three drifting rows, each a third of the catalog; the rows alternate direction.
+  const third = Math.ceil(brandCards.length / 3);
+  const rows = [brandCards.slice(0, third), brandCards.slice(third, 2 * third), brandCards.slice(2 * third)];
   return (
     <section aria-labelledby="stores-title" className="overflow-hidden py-[10svh]">
       <div className="mx-auto mb-8 w-[min(100%-2rem,72rem)]">
@@ -13,7 +14,7 @@ export function Marquee() {
       </div>
       <div className="flex flex-col gap-3" aria-hidden="true">
         {rows.map((row, i) => (
-          <div key={i} className="marquee flex gap-3" style={{ "--marquee-duration": `${60 + i * 12}s`, "--marquee-dir": i ? "reverse" : "normal" } as React.CSSProperties}>
+          <div key={i} className="marquee flex gap-3" style={{ "--marquee-duration": `${90 + i * 18}s`, "--marquee-dir": i % 2 ? "reverse" : "normal" } as React.CSSProperties}>
             {[...row, ...row].map((c, j) => (
               <span
                 key={`${c.id}-${j}`}

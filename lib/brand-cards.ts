@@ -312,6 +312,2422 @@ export const brandCards: readonly BrandCard[] = [
     "end": "#171A21",
     "ink": "#FFFFFF",
     "category": "entertainment"
+  },
+  {
+    "id": "samsclub",
+    "name": "Sam's Club",
+    "start": "#0067A0",
+    "end": "#003A5C",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "bjs",
+    "name": "BJ's Wholesale Club",
+    "start": "#D71920",
+    "end": "#7E0E13",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "kroger",
+    "name": "Kroger",
+    "start": "#1C5BB0",
+    "end": "#0A2E63",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "fredmeyer",
+    "name": "Fred Meyer",
+    "start": "#D4262B",
+    "end": "#7C1114",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "ralphs",
+    "name": "Ralphs",
+    "start": "#E0343A",
+    "end": "#86161A",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "harristeeter",
+    "name": "Harris Teeter",
+    "start": "#1F4E9A",
+    "end": "#0C2A5C",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "kingsoopers",
+    "name": "King Soopers",
+    "start": "#D62027",
+    "end": "#7F1015",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "frys",
+    "name": "Fry's Food Stores",
+    "start": "#D22630",
+    "end": "#7C1219",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "publix",
+    "name": "Publix",
+    "start": "#3D8B37",
+    "end": "#1F5A1C",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "safeway",
+    "name": "Safeway",
+    "start": "#D52B1E",
+    "end": "#7E170F",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "albertsons",
+    "name": "Albertsons",
+    "start": "#1F5FA8",
+    "end": "#0B356B",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "heb",
+    "name": "H-E-B",
+    "start": "#E1251B",
+    "end": "#86140D",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "wegmans",
+    "name": "Wegmans",
+    "start": "#C8102E",
+    "end": "#73091B",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "aldi",
+    "name": "ALDI",
+    "start": "#1C4FA1",
+    "end": "#00174A",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "meijer",
+    "name": "Meijer",
+    "start": "#D71920",
+    "end": "#7E0E13",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "gianteagle",
+    "name": "Giant Eagle",
+    "start": "#1D63B4",
+    "end": "#0C3A72",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "giantfood",
+    "name": "Giant Food",
+    "start": "#5C2D91",
+    "end": "#35195A",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "stopandshop",
+    "name": "Stop & Shop",
+    "start": "#6B2C91",
+    "end": "#3E1856",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "foodlion",
+    "name": "Food Lion",
+    "start": "#0B4EA2",
+    "end": "#052B5C",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "hyvee",
+    "name": "Hy-Vee",
+    "start": "#E31B23",
+    "end": "#8A0F14",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "winco",
+    "name": "WinCo Foods",
+    "start": "#E4002B",
+    "end": "#850019",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "sprouts",
+    "name": "Sprouts Farmers Market",
+    "start": "#0B7A3B",
+    "end": "#04481F",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "shoprite",
+    "name": "ShopRite",
+    "start": "#EE2E24",
+    "end": "#88140E",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "lidl",
+    "name": "Lidl",
+    "start": "#0050AA",
+    "end": "#002B5C",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "winndixie",
+    "name": "Winn-Dixie",
+    "start": "#E2231A",
+    "end": "#84130E",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "raleys",
+    "name": "Raley's",
+    "start": "#E4002B",
+    "end": "#850019",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "dollargeneral",
+    "name": "Dollar General",
+    "start": "#FFD54A",
+    "end": "#E0A800",
+    "ink": "#1A1200",
+    "category": "retail"
+  },
+  {
+    "id": "dollartree",
+    "name": "Dollar Tree",
+    "start": "#0A9A4A",
+    "end": "#04602C",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "familydollar",
+    "name": "Family Dollar",
+    "start": "#EF3E33",
+    "end": "#931A12",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "fivebelow",
+    "name": "Five Below",
+    "start": "#1CB8C9",
+    "end": "#0A5E7A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "ollies",
+    "name": "Ollie's Bargain Outlet",
+    "start": "#E32226",
+    "end": "#86100F",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "ross",
+    "name": "Ross Dress for Less",
+    "start": "#004B91",
+    "end": "#002A52",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "burlington",
+    "name": "Burlington",
+    "start": "#9B2049",
+    "end": "#5C1029",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "jcpenney",
+    "name": "JCPenney",
+    "start": "#CC0000",
+    "end": "#7A0000",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "dillards",
+    "name": "Dillard's",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "belk",
+    "name": "Belk",
+    "start": "#1A5C80",
+    "end": "#002B40",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "saks",
+    "name": "Saks Fifth Avenue",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "neimanmarcus",
+    "name": "Neiman Marcus",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "bloomingdales",
+    "name": "Bloomingdale's",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "vonmaur",
+    "name": "Von Maur",
+    "start": "#2B2B2B",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "boscovs",
+    "name": "Boscov's",
+    "start": "#1B4F9C",
+    "end": "#0B2B5C",
+    "ink": "#FFFFFF",
+    "category": "department"
+  },
+  {
+    "id": "instacart",
+    "name": "Instacart",
+    "start": "#0AAD0A",
+    "end": "#065F06",
+    "ink": "#FFFFFF",
+    "category": "grocery"
+  },
+  {
+    "id": "ebay",
+    "name": "eBay",
+    "start": "#0064D2",
+    "end": "#003A7A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "etsy",
+    "name": "Etsy",
+    "start": "#F1641E",
+    "end": "#A83F0C",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "wayfair",
+    "name": "Wayfair",
+    "start": "#7F187F",
+    "end": "#4A0E4A",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "bedbathbeyond",
+    "name": "Bed Bath & Beyond",
+    "start": "#1F4E9A",
+    "end": "#0A2347",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "shein",
+    "name": "SHEIN",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "zappos",
+    "name": "Zappos",
+    "start": "#2A6EBB",
+    "end": "#0F3C6E",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "qvc",
+    "name": "QVC",
+    "start": "#1F6FD1",
+    "end": "#0E3C78",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "chickfila",
+    "name": "Chick-fil-A",
+    "start": "#E51636",
+    "end": "#8C0D1F",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "tacobell",
+    "name": "Taco Bell",
+    "start": "#702082",
+    "end": "#3B0F47",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "wendys",
+    "name": "Wendy's",
+    "start": "#E2203D",
+    "end": "#8E1324",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "burgerking",
+    "name": "Burger King",
+    "start": "#F5821F",
+    "end": "#D62300",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "popeyes",
+    "name": "Popeyes",
+    "start": "#F68A1E",
+    "end": "#B8460B",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "kfc",
+    "name": "KFC",
+    "start": "#E4002B",
+    "end": "#8A0019",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "pizzahut",
+    "name": "Pizza Hut",
+    "start": "#EE3A43",
+    "end": "#9B1C23",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "dominos",
+    "name": "Domino's",
+    "start": "#0078AE",
+    "end": "#003F5C",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "papajohns",
+    "name": "Papa Johns",
+    "start": "#CF102D",
+    "end": "#7D0A1B",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "littlecaesars",
+    "name": "Little Caesars",
+    "start": "#FF6E1E",
+    "end": "#C2410C",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "olivegarden",
+    "name": "Olive Garden",
+    "start": "#7A9A3B",
+    "end": "#3F5A1E",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "longhorn",
+    "name": "LongHorn Steakhouse",
+    "start": "#8B1A1A",
+    "end": "#4A0C0C",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "redlobster",
+    "name": "Red Lobster",
+    "start": "#C8102E",
+    "end": "#6F0A19",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "applebees",
+    "name": "Applebee's",
+    "start": "#B01E2E",
+    "end": "#5E0F18",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "chilis",
+    "name": "Chili's",
+    "start": "#D62828",
+    "end": "#7A1414",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "outback",
+    "name": "Outback Steakhouse",
+    "start": "#8E1C1C",
+    "end": "#4A0D0D",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "texasroadhouse",
+    "name": "Texas Roadhouse",
+    "start": "#A6192E",
+    "end": "#5C0E1A",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "cheesecakefactory",
+    "name": "The Cheesecake Factory",
+    "start": "#8C6B3F",
+    "end": "#4A3620",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "ihop",
+    "name": "IHOP",
+    "start": "#1D5EB5",
+    "end": "#0C2F63",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "dennys",
+    "name": "Denny's",
+    "start": "#F9C00C",
+    "end": "#C8102E",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "crackerbarrel",
+    "name": "Cracker Barrel",
+    "start": "#8B5E3C",
+    "end": "#4A2E1A",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "buffalowildwings",
+    "name": "Buffalo Wild Wings",
+    "start": "#FFC600",
+    "end": "#1A1A1A",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "shakeshack",
+    "name": "Shake Shack",
+    "start": "#5FAC41",
+    "end": "#2E6B1F",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "fiveguys",
+    "name": "Five Guys",
+    "start": "#DA291C",
+    "end": "#7E150E",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "innout",
+    "name": "In-N-Out Burger",
+    "start": "#D62025",
+    "end": "#8A1216",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "sonic",
+    "name": "Sonic Drive-In",
+    "start": "#1D5BA7",
+    "end": "#0B2E5C",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "dairyqueen",
+    "name": "Dairy Queen",
+    "start": "#E4002B",
+    "end": "#8A0019",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "jackinthebox",
+    "name": "Jack in the Box",
+    "start": "#E7212E",
+    "end": "#8E1119",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "arbys",
+    "name": "Arby's",
+    "start": "#D71921",
+    "end": "#7A0D12",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "wingstop",
+    "name": "Wingstop",
+    "start": "#0F6E3B",
+    "end": "#063D20",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "raisingcanes",
+    "name": "Raising Cane's",
+    "start": "#D22630",
+    "end": "#7A1119",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "zaxbys",
+    "name": "Zaxby's",
+    "start": "#1F5DAA",
+    "end": "#0B2F5E",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "whataburger",
+    "name": "Whataburger",
+    "start": "#FF7A00",
+    "end": "#B34F00",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "culvers",
+    "name": "Culver's",
+    "start": "#0B4EA2",
+    "end": "#052A5C",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "jerseymikes",
+    "name": "Jersey Mike's Subs",
+    "start": "#D22030",
+    "end": "#6E0E18",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "jimmyjohns",
+    "name": "Jimmy John's",
+    "start": "#CC0000",
+    "end": "#7A0000",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "firehousesubs",
+    "name": "Firehouse Subs",
+    "start": "#C8102E",
+    "end": "#6B0A19",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "potbelly",
+    "name": "Potbelly Sandwich Shop",
+    "start": "#D2452E",
+    "end": "#7A2416",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "pandaexpress",
+    "name": "Panda Express",
+    "start": "#D22630",
+    "end": "#7A1119",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "qdoba",
+    "name": "Qdoba",
+    "start": "#A6192E",
+    "end": "#5C0E1A",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "sweetgreen",
+    "name": "sweetgreen",
+    "start": "#2E7D32",
+    "end": "#15421A",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "cava",
+    "name": "CAVA",
+    "start": "#F2B233",
+    "end": "#B8781A",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "noodles",
+    "name": "Noodles & Company",
+    "start": "#E0552F",
+    "end": "#8A2E17",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "timhortons",
+    "name": "Tim Hortons",
+    "start": "#C8102E",
+    "end": "#6F0A19",
+    "ink": "#FFFFFF",
+    "category": "coffee"
+  },
+  {
+    "id": "peets",
+    "name": "Peet's Coffee",
+    "start": "#7A1F2E",
+    "end": "#3E0F17",
+    "ink": "#FFFFFF",
+    "category": "coffee"
+  },
+  {
+    "id": "dutchbros",
+    "name": "Dutch Bros Coffee",
+    "start": "#0C4DA2",
+    "end": "#072C5C",
+    "ink": "#FFFFFF",
+    "category": "coffee"
+  },
+  {
+    "id": "caribou",
+    "name": "Caribou Coffee",
+    "start": "#1C4E3D",
+    "end": "#0D2A20",
+    "ink": "#FFFFFF",
+    "category": "coffee"
+  },
+  {
+    "id": "krispykreme",
+    "name": "Krispy Kreme",
+    "start": "#00843D",
+    "end": "#004D23",
+    "ink": "#FFFFFF",
+    "category": "coffee"
+  },
+  {
+    "id": "baskinrobbins",
+    "name": "Baskin-Robbins",
+    "start": "#E8488A",
+    "end": "#8E1F4F",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "coldstone",
+    "name": "Cold Stone Creamery",
+    "start": "#C8102E",
+    "end": "#6F0A19",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "jamba",
+    "name": "Jamba",
+    "start": "#F26322",
+    "end": "#9E3A10",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "smoothieking",
+    "name": "Smoothie King",
+    "start": "#E11F26",
+    "end": "#7E0F14",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "auntieannes",
+    "name": "Auntie Anne's",
+    "start": "#1C3F94",
+    "end": "#0D2152",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "cinnabon",
+    "name": "Cinnabon",
+    "start": "#1A4F9C",
+    "end": "#0C2A55",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "einsteinbros",
+    "name": "Einstein Bros. Bagels",
+    "start": "#8A3B1E",
+    "end": "#4A1F0F",
+    "ink": "#FFFFFF",
+    "category": "coffee"
+  },
+  {
+    "id": "wafflehouse",
+    "name": "Waffle House",
+    "start": "#FFCC00",
+    "end": "#B38F00",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "redrobin",
+    "name": "Red Robin",
+    "start": "#C8102E",
+    "end": "#6F0A19",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "tgifridays",
+    "name": "TGI Fridays",
+    "start": "#D7282F",
+    "end": "#7A1216",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "pfchangs",
+    "name": "P.F. Chang's",
+    "start": "#A6192E",
+    "end": "#3A0A10",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "bjsrestaurants",
+    "name": "BJ's Restaurant & Brewhouse",
+    "start": "#C8102E",
+    "end": "#6F0A19",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "bonefish",
+    "name": "Bonefish Grill",
+    "start": "#1C3D5A",
+    "end": "#0B1F30",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "carrabbas",
+    "name": "Carrabba's Italian Grill",
+    "start": "#A3261F",
+    "end": "#5A140F",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "maggianos",
+    "name": "Maggiano's Little Italy",
+    "start": "#7A1F2B",
+    "end": "#3E0F15",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "ruthschris",
+    "name": "Ruth's Chris Steak House",
+    "start": "#6E1427",
+    "end": "#360A13",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "capitalgrille",
+    "name": "The Capital Grille",
+    "start": "#5B1A1F",
+    "end": "#2A0B0E",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "mortons",
+    "name": "Morton's The Steakhouse",
+    "start": "#2B2B2B",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "firstwatch",
+    "name": "First Watch",
+    "start": "#F5A623",
+    "end": "#B36E10",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "portillos",
+    "name": "Portillo's",
+    "start": "#1F3C8C",
+    "end": "#0E1F4D",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "chuys",
+    "name": "Chuy's",
+    "start": "#1E9E8F",
+    "end": "#0F524A",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "torchys",
+    "name": "Torchy's Tacos",
+    "start": "#D62027",
+    "end": "#7A1115",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "elpolloloco",
+    "name": "El Pollo Loco",
+    "start": "#F2A900",
+    "end": "#B36E00",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "deltaco",
+    "name": "Del Taco",
+    "start": "#C8102E",
+    "end": "#6F0A19",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "moes",
+    "name": "Moe's Southwest Grill",
+    "start": "#6CA33A",
+    "end": "#37571B",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "bojangles",
+    "name": "Bojangles",
+    "start": "#F2A900",
+    "end": "#B36E00",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "churchs",
+    "name": "Church's Texas Chicken",
+    "start": "#D52B1E",
+    "end": "#7A170F",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "checkers",
+    "name": "Checkers & Rally's",
+    "start": "#D62027",
+    "end": "#1A1A1A",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "whitecastle",
+    "name": "White Castle",
+    "start": "#0C3B8C",
+    "end": "#061F4D",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "steaknshake",
+    "name": "Steak 'n Shake",
+    "start": "#C8102E",
+    "end": "#1A1A1A",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "carlsjr",
+    "name": "Carl's Jr. / Hardee's",
+    "start": "#D62027",
+    "end": "#7A1115",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "papamurphys",
+    "name": "Papa Murphy's",
+    "start": "#C8102E",
+    "end": "#6F0A19",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "marcos",
+    "name": "Marco's Pizza",
+    "start": "#1B3F8B",
+    "end": "#0D1F45",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "blazepizza",
+    "name": "Blaze Pizza",
+    "start": "#F04E23",
+    "end": "#8F2C12",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "modpizza",
+    "name": "MOD Pizza",
+    "start": "#D71920",
+    "end": "#7A0D12",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "nothingbundtcakes",
+    "name": "Nothing Bundt Cakes",
+    "start": "#F26A3D",
+    "end": "#A33D1C",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "crumbl",
+    "name": "Crumbl",
+    "start": "#F7B1C9",
+    "end": "#D9607F",
+    "ink": "#1A1200",
+    "category": "food"
+  },
+  {
+    "id": "insomniacookies",
+    "name": "Insomnia Cookies",
+    "start": "#2E1A47",
+    "end": "#140A22",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "tropicalsmoothie",
+    "name": "Tropical Smoothie Cafe",
+    "start": "#00A79D",
+    "end": "#005B55",
+    "ink": "#FFFFFF",
+    "category": "food"
+  },
+  {
+    "id": "gap",
+    "name": "Gap",
+    "start": "#1E4A8A",
+    "end": "#0A2550",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "oldnavy",
+    "name": "Old Navy",
+    "start": "#1F55A0",
+    "end": "#00305E",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "bananarepublic",
+    "name": "Banana Republic",
+    "start": "#4A4A4A",
+    "end": "#141414",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "athleta",
+    "name": "Athleta",
+    "start": "#3A3A3A",
+    "end": "#0F0F0F",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "hm",
+    "name": "H&M",
+    "start": "#E50010",
+    "end": "#8A0009",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "zara",
+    "name": "Zara",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "uniqlo",
+    "name": "UNIQLO",
+    "start": "#E60012",
+    "end": "#92000B",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "lululemon",
+    "name": "lululemon",
+    "start": "#D31334",
+    "end": "#7E0A1D",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "adidas",
+    "name": "adidas",
+    "start": "#3B3B3B",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "underarmour",
+    "name": "Under Armour",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "footlocker",
+    "name": "Foot Locker",
+    "start": "#2B2B2B",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "finishline",
+    "name": "Finish Line",
+    "start": "#1D5AC9",
+    "end": "#002A73",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "dicks",
+    "name": "DICK'S Sporting Goods",
+    "start": "#1E7A66",
+    "end": "#00493B",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "rei",
+    "name": "REI Co-op",
+    "start": "#3E7A3C",
+    "end": "#1C3F1B",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "basspro",
+    "name": "Bass Pro Shops",
+    "start": "#1E7A4E",
+    "end": "#0B4530",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "cabelas",
+    "name": "Cabela's",
+    "start": "#3C7A4A",
+    "end": "#1E4A2A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "academy",
+    "name": "Academy Sports + Outdoors",
+    "start": "#1E6FD0",
+    "end": "#00387A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "scheels",
+    "name": "SCHEELS",
+    "start": "#D2232A",
+    "end": "#7E1218",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "victoriassecret",
+    "name": "Victoria's Secret",
+    "start": "#E31C79",
+    "end": "#8C0F49",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "bathbodyworks",
+    "name": "Bath & Body Works",
+    "start": "#1E6FC0",
+    "end": "#0A3C70",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "americaneagle",
+    "name": "American Eagle",
+    "start": "#1E4A80",
+    "end": "#0A2240",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "abercrombie",
+    "name": "Abercrombie & Fitch",
+    "start": "#2A4D80",
+    "end": "#12243F",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "hollister",
+    "name": "Hollister",
+    "start": "#16355E",
+    "end": "#071A33",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "urbanoutfitters",
+    "name": "Urban Outfitters",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "anthropologie",
+    "name": "Anthropologie",
+    "start": "#8C6A4F",
+    "end": "#4A3526",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "freepeople",
+    "name": "Free People",
+    "start": "#2E2E2E",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "jcrew",
+    "name": "J.Crew",
+    "start": "#1F3A68",
+    "end": "#0B1F3F",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "madewell",
+    "name": "Madewell",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "levis",
+    "name": "Levi's",
+    "start": "#C41230",
+    "end": "#7A0A1C",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "vans",
+    "name": "Vans",
+    "start": "#D7282F",
+    "end": "#7E1419",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "converse",
+    "name": "Converse",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "columbia",
+    "name": "Columbia Sportswear",
+    "start": "#1E63C4",
+    "end": "#083A7A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "northface",
+    "name": "The North Face",
+    "start": "#E1251B",
+    "end": "#8A1510",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "patagonia",
+    "name": "Patagonia",
+    "start": "#2C5BA8",
+    "end": "#0F2F60",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "coach",
+    "name": "Coach",
+    "start": "#8A6141",
+    "end": "#4A3221",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "katespade",
+    "name": "Kate Spade New York",
+    "start": "#1F8A5A",
+    "end": "#0C4A30",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "michaelkors",
+    "name": "Michael Kors",
+    "start": "#3B3B3B",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "dsw",
+    "name": "DSW",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "famousfootwear",
+    "name": "Famous Footwear",
+    "start": "#E8402E",
+    "end": "#8C1E14",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "journeys",
+    "name": "Journeys",
+    "start": "#2F2F2F",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "skechers",
+    "name": "Skechers",
+    "start": "#1E52C8",
+    "end": "#00236E",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "crocs",
+    "name": "Crocs",
+    "start": "#19B35C",
+    "end": "#0A6A34",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "hottopic",
+    "name": "Hot Topic",
+    "start": "#C8102E",
+    "end": "#5A0A16",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "express",
+    "name": "Express",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "buckle",
+    "name": "Buckle",
+    "start": "#B3202A",
+    "end": "#5E1015",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "pacsun",
+    "name": "PacSun",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "tillys",
+    "name": "Tillys",
+    "start": "#D12031",
+    "end": "#7A1019",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "carters",
+    "name": "Carter's",
+    "start": "#1E8AD6",
+    "end": "#0A4F8A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "childrensplace",
+    "name": "The Children's Place",
+    "start": "#EE2E3A",
+    "end": "#8E0E15",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "primark",
+    "name": "Primark",
+    "start": "#1E6FC8",
+    "end": "#003D7D",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "menswearhouse",
+    "name": "Men's Wearhouse",
+    "start": "#1F3F70",
+    "end": "#0A1F3F",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "josabank",
+    "name": "Jos. A. Bank",
+    "start": "#1E3A60",
+    "end": "#0B1D35",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "lanebryant",
+    "name": "Lane Bryant",
+    "start": "#7B2C8C",
+    "end": "#3E1545",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "chicos",
+    "name": "Chico's",
+    "start": "#3B3B3B",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "talbots",
+    "name": "Talbots",
+    "start": "#D0243F",
+    "end": "#7A1020",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "anntaylor",
+    "name": "Ann Taylor",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "loft",
+    "name": "LOFT",
+    "start": "#D9775B",
+    "end": "#8A3E2A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "landsend",
+    "name": "Lands' End",
+    "start": "#163B6E",
+    "end": "#081D3A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "llbean",
+    "name": "L.L.Bean",
+    "start": "#1E6B45",
+    "end": "#0B3B25",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "newbalance",
+    "name": "New Balance",
+    "start": "#CF0A2C",
+    "end": "#7A0618",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "maccosmetics",
+    "name": "MAC Cosmetics",
+    "start": "#2B2B2B",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "sallybeauty",
+    "name": "Sally Beauty",
+    "start": "#D8237E",
+    "end": "#7E1045",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "bluemercury",
+    "name": "Bluemercury",
+    "start": "#1E5FA8",
+    "end": "#0B2F5E",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "massageenvy",
+    "name": "Massage Envy",
+    "start": "#1E8A8A",
+    "end": "#0B4A4A",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "waxcenter",
+    "name": "European Wax Center",
+    "start": "#7A3AA0",
+    "end": "#3E1A55",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "greatclips",
+    "name": "Great Clips",
+    "start": "#D21F2B",
+    "end": "#7E1119",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "supercuts",
+    "name": "Supercuts",
+    "start": "#C8102E",
+    "end": "#6E0A1A",
+    "ink": "#FFFFFF",
+    "category": "beauty"
+  },
+  {
+    "id": "ikea",
+    "name": "IKEA",
+    "start": "#1E6FC8",
+    "end": "#0051BA",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "williamssonoma",
+    "name": "Williams Sonoma",
+    "start": "#3E6B4A",
+    "end": "#1E3A28",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "potterybarn",
+    "name": "Pottery Barn",
+    "start": "#6B5B4A",
+    "end": "#3A2F24",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "westelm",
+    "name": "West Elm",
+    "start": "#4A4A4A",
+    "end": "#1A1A1A",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "crateandbarrel",
+    "name": "Crate & Barrel",
+    "start": "#333333",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "cb2",
+    "name": "CB2",
+    "start": "#4A4A4A",
+    "end": "#111111",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "rh",
+    "name": "RH",
+    "start": "#5A5A5A",
+    "end": "#2A2A2A",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "michaels",
+    "name": "Michaels",
+    "start": "#E41E26",
+    "end": "#8A0F14",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "hobbylobby",
+    "name": "Hobby Lobby",
+    "start": "#F26B2E",
+    "end": "#9E3D10",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "acehardware",
+    "name": "Ace Hardware",
+    "start": "#E02020",
+    "end": "#8A0A0A",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "menards",
+    "name": "Menards",
+    "start": "#1E8A4E",
+    "end": "#00512B",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "tractorsupply",
+    "name": "Tractor Supply Co.",
+    "start": "#D11A2B",
+    "end": "#7A0E18",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "harborfreight",
+    "name": "Harbor Freight Tools",
+    "start": "#D22630",
+    "end": "#7A1119",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "petco",
+    "name": "Petco",
+    "start": "#1E4A80",
+    "end": "#0A2240",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "petsmart",
+    "name": "PetSmart",
+    "start": "#1E86E0",
+    "end": "#004A94",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "chewy",
+    "name": "Chewy",
+    "start": "#2E5FE0",
+    "end": "#12307A",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "containerstore",
+    "name": "The Container Store",
+    "start": "#2E7FC8",
+    "end": "#0F4578",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "athome",
+    "name": "At Home",
+    "start": "#F7742E",
+    "end": "#A3400A",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "surlatable",
+    "name": "Sur La Table",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "yankeecandle",
+    "name": "Yankee Candle",
+    "start": "#A3254A",
+    "end": "#5A0F28",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "hallmark",
+    "name": "Hallmark Gold Crown",
+    "start": "#6E3AA3",
+    "end": "#3B1A5C",
+    "ink": "#FFFFFF",
+    "category": "home"
+  },
+  {
+    "id": "googleplay",
+    "name": "Google Play",
+    "start": "#34A853",
+    "end": "#1E6B36",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "nintendo",
+    "name": "Nintendo eShop",
+    "start": "#E60012",
+    "end": "#8A000B",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "roblox",
+    "name": "Roblox",
+    "start": "#E2231A",
+    "end": "#8A1410",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "fortnite",
+    "name": "Fortnite V-Bucks",
+    "start": "#7B3FE4",
+    "end": "#3A1A7A",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "battlenet",
+    "name": "Blizzard Battle.net",
+    "start": "#148EFF",
+    "end": "#0B3D91",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "riot",
+    "name": "Riot Games",
+    "start": "#D13639",
+    "end": "#7A1416",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "minecraft",
+    "name": "Minecraft",
+    "start": "#62B347",
+    "end": "#3B6E2A",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "hulu",
+    "name": "Hulu",
+    "start": "#1CE783",
+    "end": "#0B6E3A",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "disneyplus",
+    "name": "Disney+",
+    "start": "#113CCF",
+    "end": "#06153F",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "hbomax",
+    "name": "HBO Max",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "paramountplus",
+    "name": "Paramount+",
+    "start": "#0064FF",
+    "end": "#002B70",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "peacock",
+    "name": "Peacock",
+    "start": "#3A3A3A",
+    "end": "#000000",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "audible",
+    "name": "Audible",
+    "start": "#F8991C",
+    "end": "#B35F00",
+    "ink": "#1A1200",
+    "category": "entertainment"
+  },
+  {
+    "id": "barnesnoble",
+    "name": "Barnes & Noble",
+    "start": "#1F5B3B",
+    "end": "#0E3321",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "booksamillion",
+    "name": "Books-A-Million",
+    "start": "#B61E2E",
+    "end": "#6B0F19",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "gamestop",
+    "name": "GameStop",
+    "start": "#D7262E",
+    "end": "#1A1A1A",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung",
+    "start": "#1428A0",
+    "end": "#0A1550",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "dell",
+    "name": "Dell",
+    "start": "#007DB8",
+    "end": "#003F5E",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "hp",
+    "name": "HP",
+    "start": "#0096D6",
+    "end": "#004E70",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "newegg",
+    "name": "Newegg",
+    "start": "#F7921E",
+    "end": "#B35A00",
+    "ink": "#1A1200",
+    "category": "tech"
+  },
+  {
+    "id": "bhphoto",
+    "name": "B&H Photo Video",
+    "start": "#1F5FBF",
+    "end": "#0A2E5C",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "microcenter",
+    "name": "Micro Center",
+    "start": "#D71920",
+    "end": "#7A0E13",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "staples",
+    "name": "Staples",
+    "start": "#CC0000",
+    "end": "#7A0000",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "officedepot",
+    "name": "Office Depot / OfficeMax",
+    "start": "#D01E2E",
+    "end": "#7A0F19",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "verizon",
+    "name": "Verizon",
+    "start": "#CD040B",
+    "end": "#6B0206",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "att",
+    "name": "AT&T Prepaid",
+    "start": "#00A8E0",
+    "end": "#005F80",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "tmobile",
+    "name": "T-Mobile Prepaid",
+    "start": "#E20074",
+    "end": "#8A0046",
+    "ink": "#FFFFFF",
+    "category": "tech"
+  },
+  {
+    "id": "amc",
+    "name": "AMC Theatres",
+    "start": "#E71A0F",
+    "end": "#8A0F08",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "regal",
+    "name": "Regal",
+    "start": "#C8102E",
+    "end": "#6B0818",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "cinemark",
+    "name": "Cinemark",
+    "start": "#ED1C24",
+    "end": "#8A0F14",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "fandango",
+    "name": "Fandango",
+    "start": "#FF6E00",
+    "end": "#A84800",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "ticketmaster",
+    "name": "Ticketmaster",
+    "start": "#026CDF",
+    "end": "#013A7A",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "stubhub",
+    "name": "StubHub",
+    "start": "#3F1D74",
+    "end": "#1E0B3A",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "daveandbusters",
+    "name": "Dave & Buster's",
+    "start": "#FF6A13",
+    "end": "#A33D00",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "topgolf",
+    "name": "Topgolf",
+    "start": "#1E6FD9",
+    "end": "#0A2F6B",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "chuckecheese",
+    "name": "Chuck E. Cheese",
+    "start": "#6D2077",
+    "end": "#3A1040",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "bowlero",
+    "name": "Bowlero",
+    "start": "#E4002B",
+    "end": "#7A0017",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "mainevent",
+    "name": "Main Event",
+    "start": "#1F3FA6",
+    "end": "#0B1F5A",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "round1",
+    "name": "Round1",
+    "start": "#E60012",
+    "end": "#8A000B",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "seaworld",
+    "name": "SeaWorld",
+    "start": "#0067B1",
+    "end": "#00335C",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "sixflags",
+    "name": "Six Flags",
+    "start": "#D0021B",
+    "end": "#6B0110",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "disneygiftcard",
+    "name": "Disney Gift Card",
+    "start": "#0F3B8C",
+    "end": "#061B45",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "universal",
+    "name": "Universal Orlando",
+    "start": "#1E4EA8",
+    "end": "#0B2258",
+    "ink": "#FFFFFF",
+    "category": "entertainment"
+  },
+  {
+    "id": "hotelscom",
+    "name": "Hotels.com",
+    "start": "#D4111E",
+    "end": "#7A0A11",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "expedia",
+    "name": "Expedia",
+    "start": "#00355F",
+    "end": "#001A30",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "southwest",
+    "name": "Southwest Airlines",
+    "start": "#304CB2",
+    "end": "#1A2A66",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "delta",
+    "name": "Delta Air Lines",
+    "start": "#E3132C",
+    "end": "#7A0A18",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "united",
+    "name": "United Airlines",
+    "start": "#0033A0",
+    "end": "#001A52",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "americanairlines",
+    "name": "American Airlines",
+    "start": "#0078D2",
+    "end": "#00407A",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "jetblue",
+    "name": "JetBlue",
+    "start": "#00205B",
+    "end": "#000E2C",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "alaskaair",
+    "name": "Alaska Airlines",
+    "start": "#01426A",
+    "end": "#00213A",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "spirit",
+    "name": "Spirit Airlines",
+    "start": "#FFEC00",
+    "end": "#B3A500",
+    "ink": "#1A1200",
+    "category": "travel"
+  },
+  {
+    "id": "carnival",
+    "name": "Carnival Cruise Line",
+    "start": "#003087",
+    "end": "#001748",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "royalcaribbean",
+    "name": "Royal Caribbean",
+    "start": "#005DAA",
+    "end": "#002F57",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "lyft",
+    "name": "Lyft",
+    "start": "#FF00BF",
+    "end": "#8A0068",
+    "ink": "#FFFFFF",
+    "category": "travel"
+  },
+  {
+    "id": "shell",
+    "name": "Shell",
+    "start": "#FFD500",
+    "end": "#B39500",
+    "ink": "#1A1200",
+    "category": "other"
+  },
+  {
+    "id": "bp",
+    "name": "BP",
+    "start": "#007F00",
+    "end": "#004400",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "exxonmobil",
+    "name": "ExxonMobil",
+    "start": "#FE000C",
+    "end": "#8A0007",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "chevron",
+    "name": "Chevron / Texaco",
+    "start": "#0B5FBF",
+    "end": "#00295C",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "speedway",
+    "name": "Speedway",
+    "start": "#E31937",
+    "end": "#7A0D1D",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "seveneleven",
+    "name": "7-Eleven",
+    "start": "#008061",
+    "end": "#004030",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "wawa",
+    "name": "Wawa",
+    "start": "#C8102E",
+    "end": "#6B0818",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "sheetz",
+    "name": "Sheetz",
+    "start": "#D22630",
+    "end": "#70121A",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "circlek",
+    "name": "Circle K",
+    "start": "#EE2E24",
+    "end": "#8A1109",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "caseys",
+    "name": "Casey's",
+    "start": "#C8102E",
+    "end": "#6B0818",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "bucees",
+    "name": "Buc-ee's",
+    "start": "#EE1C25",
+    "end": "#8A0E14",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "kwiktrip",
+    "name": "Kwik Trip",
+    "start": "#E4002B",
+    "end": "#7A0017",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "quiktrip",
+    "name": "QuikTrip",
+    "start": "#D71921",
+    "end": "#7A0D12",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "racetrac",
+    "name": "RaceTrac",
+    "start": "#D22630",
+    "end": "#70121A",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "pilot",
+    "name": "Pilot Flying J",
+    "start": "#CE0E2D",
+    "end": "#6B0718",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "loves",
+    "name": "Love's Travel Stops",
+    "start": "#FFD100",
+    "end": "#B39200",
+    "ink": "#1A1200",
+    "category": "other"
+  },
+  {
+    "id": "gnc",
+    "name": "GNC",
+    "start": "#E4002B",
+    "end": "#7A0017",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "vitaminshoppe",
+    "name": "The Vitamin Shoppe",
+    "start": "#00843D",
+    "end": "#004420",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "fanatics",
+    "name": "Fanatics",
+    "start": "#0053A0",
+    "end": "#002950",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "groupon",
+    "name": "Groupon",
+    "start": "#53A318",
+    "end": "#2B5A0C",
+    "ink": "#FFFFFF",
+    "category": "other"
+  },
+  {
+    "id": "lego",
+    "name": "LEGO",
+    "start": "#E3000B",
+    "end": "#8A0007",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "buildabear",
+    "name": "Build-A-Bear Workshop",
+    "start": "#1C5FAE",
+    "end": "#0A2E5C",
+    "ink": "#FFFFFF",
+    "category": "retail"
+  },
+  {
+    "id": "spafinder",
+    "name": "Spafinder",
+    "start": "#6B3FA0",
+    "end": "#351F52",
+    "ink": "#FFFFFF",
+    "category": "other"
   }
 ] as const;
 
