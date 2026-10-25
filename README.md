@@ -1,6 +1,6 @@
 # GiftVault site
 
-Marketing site for GiftVault, a free iOS gift card manager. Next.js 16 on Vercel.
+Marketing site for GiftVault, a free gift card app for iPhone. Next.js 16 on Vercel.
 
 ## Develop
 

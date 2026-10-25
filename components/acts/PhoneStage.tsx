@@ -9,9 +9,9 @@ import type { ScreenName } from "@/lib/screens";
 type Stage = { screen: ScreenName; eyebrow: string; title: string; body: string };
 
 const stages: Stage[] = [
-  { screen: "cards", eyebrow: "Your vault", title: "Every card, in order.", body: "The stack keeps merchant colours so you find a card by sight. Drag to reorder; the total is always at the top." },
-  { screen: "detail", eyebrow: "One tap", title: "Show it at the register.", body: "The detail screen is one button away from the barcode. Spent, Added and Check balance sit right under it." },
-  { screen: "register", eyebrow: "At the counter", title: "Hold the barcode to the scanner.", body: "The screen goes to full brightness, the barcode renders at the size scanners read, and the number is there in large type if they need to key it." },
+  { screen: "cards", eyebrow: "The stack", title: "Every card you own, in one list.", body: "Cards keep their store's colours, so you can spot the Target card without reading. Drag to reorder. The total of every card sits at the top." },
+  { screen: "detail", eyebrow: "The card", title: "One tap to the barcode.", body: "Open a card and the barcode button is at the top, with Spent, Added and Check balance under it." },
+  { screen: "register", eyebrow: "The register", title: "Hold it up to the scanner.", body: "The screen goes to full brightness and the barcode draws at a size scanners read. If the cashier has to type it in, the number is in large type underneath." },
 ];
 
 /**

@@ -39,19 +39,19 @@ export function Hero() {
         <CardSheen flipRef={flipRef} className="absolute inset-0 h-full w-full" />
 
         <div ref={headline} className="absolute inset-x-0 bottom-[7svh] z-10 flex flex-col items-center px-6 text-center">
-          <p className="eyebrow">Free iOS gift card manager</p>
+          <p className="eyebrow">Free gift card app for iPhone</p>
           <h1 id="hero-title" className="mt-3 max-w-4xl text-balance text-[clamp(2.2rem,5.6vw,4.6rem)] font-semibold leading-[1.02] tracking-[-0.03em]">
             {site.tagline}
           </h1>
           <p className="mt-4 max-w-xl text-balance text-base text-mist sm:text-lg">
-            Scan it once. Show it at the register. Trust the balance. No accounts, no ads, no tracking.
+            Scan a card once and GiftVault keeps the barcode, the number, the PIN and whatever balance is left. There is no account to make.
           </p>
           <AppStoreBadge className="mt-6" size="lg" />
         </div>
 
         <p ref={caption} className="pointer-events-none absolute bottom-[14svh] left-1/2 z-10 w-[min(90vw,32rem)] -translate-x-1/2 text-center text-lg text-linen opacity-0 sm:text-xl">
-          Tap a card and it turns into a bright, scannable barcode.
-          <span className="mt-1 block text-sm text-mist">With the number right there, in case the scanner can't read screens.</span>
+          Tap a card and the screen becomes a barcode the scanner can read.
+          <span className="mt-1 block text-sm text-mist">The number sits underneath for the cashier whose scanner can't read a screen.</span>
         </p>
 
         <div aria-hidden="true" className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-xs uppercase tracking-[0.2em] text-mist">

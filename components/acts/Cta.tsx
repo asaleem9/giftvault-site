@@ -62,9 +62,9 @@ export function Cta() {
       <p className="eyebrow">Total across 5 cards</p>
       <Odometer cents={vaultTotal} from={0} className="mt-2 text-[clamp(2.6rem,8vw,5.5rem)] font-semibold text-linen" />
       <h2 id="close-title" className="mt-6 max-w-2xl text-balance text-[clamp(1.6rem,4vw,2.8rem)] font-semibold leading-tight tracking-[-0.02em]">
-        Money you already have, where you can actually use it.
+        Money you'd otherwise find in a drawer in 2029.
       </h2>
-      <p className="mt-4 max-w-md text-balance text-mist">Free. No accounts, no ads, no tracking. iPhone and iPhone Duo, iOS 27 and later.</p>
+      <p className="mt-4 max-w-md text-balance text-mist">GiftVault is free, with no account, no ads and no tracking. It runs on iPhone and iPhone Duo with iOS 27 or later.</p>
       <AppStoreBadge className="mt-10" size="lg" />
     </section>
   );

@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { site } from "@/lib/config";
 
-export const alt = `${site.name}: ${site.tagline}`;
+export const alt = site.title;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,9 +16,9 @@ export default async function OpenGraphImage() {
         <img src={mascot} width={560} height={560} style={{ position: "absolute", right: 40, bottom: -30 }} alt="" />
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", maxWidth: 620 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 28 }}><img src={mark} width={56} height={56} alt="" /><span style={{ fontSize: 34, fontWeight: 700, letterSpacing: -1 }}>GiftVault</span></div>
-          <div style={{ fontSize: 22, letterSpacing: 6, color: "#9db5a9", textTransform: "uppercase" }}>Free iOS gift card manager</div>
-          <div style={{ display: "flex", flexDirection: "column", fontSize: 84, fontWeight: 700, letterSpacing: -3, lineHeight: 1.0, marginTop: 16 }}><span>Every gift card.</span><span>One place.</span></div>
-          <div style={{ fontSize: 28, color: "#9db5a9", marginTop: 24 }}>Scan it once. Show it at the register. Trust the balance.</div>
+          <div style={{ fontSize: 22, letterSpacing: 6, color: "#9db5a9", textTransform: "uppercase" }}>Free gift card app for iPhone</div>
+          <div style={{ display: "flex", flexDirection: "column", fontSize: 62, fontWeight: 700, letterSpacing: -2, lineHeight: 1.05, marginTop: 16 }}><span>Gift cards you can</span><span>find when you're</span><span>standing at the</span><span>register.</span></div>
+          <div style={{ fontSize: 28, color: "#9db5a9", marginTop: 24 }}>Scan a card once. GiftVault keeps the barcode, number, PIN and balance.</div>
         </div>
       </div>
     ),

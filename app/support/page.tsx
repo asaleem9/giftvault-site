@@ -38,13 +38,13 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: "Is it really free?",
-    a: "Yes. No subscription, no in-app purchases, no ads, no accounts. It is a tool, not a funnel.",
+    a: "Yes. There is no subscription, no in-app purchase, no ads and no account.",
   },
 ];
 
 export default function SupportPage() {
   return (
-    <Paper title="Support" lede="Most questions are answered below. If yours is not, get in touch." updated="October 2026" pose="wave">
+    <Paper title="Support" lede="Most questions are answered below. If yours isn't, get in touch." updated="October 2026" pose="wave">
       <section>
         <h2>Contact</h2>
         <p>

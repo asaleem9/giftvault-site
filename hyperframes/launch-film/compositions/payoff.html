@@ -32,8 +32,8 @@
       </div>
     </div>
     <div id="payoff-copy" class="clip ink" data-start="0.2" data-duration="6.8" data-track-index="2">
-      <h1 id="payoff-title" class="title">Show it at the register</h1>
-      <p id="payoff-sub" class="quiet">Tap a card: it flips to a bright barcode, with the number right there.</p>
+      <h1 id="payoff-title" class="title">Hold it up to the scanner</h1>
+      <p id="payoff-sub" class="quiet">Tap a card and it flips to a barcode, with the number underneath if the scanner can't read screens.</p>
     </div>
   </div>
   <script>
@@ -42,9 +42,9 @@
     function leaveTitle(tl, ws, at) { tl.to(ws, { opacity: 0, filter: "blur(8px)", duration: 0.18, stagger: 0.04, ease: "power2.in" }, at); }
     const tl = gsap.timeline({ paused: true });
     // The title starts linen on green, and switches to ink as the frame floods at 3.4 s (clip time).
-    const ws = landTitle(tl, "#payoff-title", 0.4, 4);
+    const ws = landTitle(tl, "#payoff-title", 0.4, 5);
     tl.fromTo(ws, { color: "#f1efe6" }, { color: "#1f2a24", duration: 0.4, ease: "power2.inOut" }, 3.4);
-    tl.fromTo(ws[4], { color: "#d8c08a" }, { color: "#8a6d2b", duration: 0.4, ease: "power2.inOut" }, 3.4);
+    tl.fromTo(ws[5], { color: "#d8c08a" }, { color: "#8a6d2b", duration: 0.4, ease: "power2.inOut" }, 3.4);
     const sub = words("#payoff-sub");
     tl.fromTo(sub, { opacity: 0, filter: "blur(6px)", color: "#9db5a9" }, { opacity: 1, filter: "blur(0px)", color: "#9db5a9", duration: 0.13, stagger: 0.05, ease: "power2.out" }, 1.0);
     tl.to(sub, { color: "#5f7369", duration: 0.4, ease: "power2.inOut" }, 3.4);

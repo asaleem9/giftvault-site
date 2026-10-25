@@ -22,11 +22,11 @@ export function DrawerFilm() {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ground to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ground to-transparent" aria-hidden="true" />
         <div className="absolute bottom-[9svh] left-[max(1rem,calc(50vw-36rem))] z-10 w-[min(92vw,26rem)]">
-          <p className="eyebrow">The drawer</p>
+          <p className="eyebrow">What goes in</p>
           <h2 id="drawer-title" className="mt-3 text-balance text-[clamp(1.7rem,3.6vw,2.8rem)] font-semibold leading-tight tracking-[-0.02em]">
-            Physical cards, Costco packs, DoorDash codes, emailed cards.
+            Plastic cards, Costco packs and emailed codes.
           </h2>
-          <p className="mt-3 text-balance text-sm text-mist sm:text-base">Scan or type them once. They stay in order, with their balances, where you can find them.</p>
+          <p className="mt-3 text-balance text-sm text-mist sm:text-base">Scan or type each one once. After that it sits in the stack with its balance, in whatever order you drag it into.</p>
         </div>
       </div>
     </section>

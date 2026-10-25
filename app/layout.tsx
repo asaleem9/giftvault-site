@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono"
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name}: ${site.tagline}`,
+    default: site.title,
     template: `%s · ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,
   openGraph: {
-    title: `${site.name}: ${site.tagline}`,
+    title: site.title,
     description: site.description,
     siteName: site.name,
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name}: ${site.tagline}`,
+    title: site.title,
     description: site.description,
   },
   appleWebApp: { title: site.name },

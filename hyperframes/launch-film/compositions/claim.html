@@ -12,7 +12,7 @@
   <div id="root" data-composition-id="claim" data-width="1920" data-height="1080">
     <div id="claim-slot" class="clip" data-start="0" data-duration="4.5" data-track-index="1">
       <h1 id="claim-1" class="title">No store lets apps read balances.</h1>
-      <h1 id="claim-2" class="title">GiftVault doesn't pretend to.</h1>
+      <h1 id="claim-2" class="title">So GiftVault doesn't fake one.</h1>
     </div>
   </div>
   <script>
@@ -21,7 +21,7 @@
     function leaveTitle(tl, ws, at) { tl.to(ws, { opacity: 0, filter: "blur(8px)", duration: 0.18, stagger: 0.04, ease: "power2.in" }, at); }
     const tl = gsap.timeline({ paused: true });
     const a = landTitle(tl, "#claim-1", 0.3, -1);
-    const b = landTitle(tl, "#claim-2", 2.2, 1);
+    const b = landTitle(tl, "#claim-2", 2.2, 3);
     // Both lines hold to the end; the end card takes over.
     window.__timelines["claim"] = tl;
   </script>

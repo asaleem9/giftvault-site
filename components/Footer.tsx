@@ -9,12 +9,12 @@ export function Footer({ theme = "dark" }: { theme?: "dark" | "paper" }) {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-col gap-2">
           <Wordmark className={paper ? "text-paper-linen [&>span:last-child]:text-paper-brass" : "text-linen"} />
-          <p>Free. No accounts, no ads, no tracking.</p>
+          <p>A free gift card app for iPhone.</p>
         </div>
         <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2">
           <Link href="/privacy" className="hover:underline">Privacy</Link>
           <Link href="/support" className="hover:underline">Support</Link>
-          <a href={site.repoUrl} className="hover:underline">Source of this site</a>
+          <a href={site.repoUrl} className="hover:underline">Site source</a>
           <a href={site.appStoreUrl} className="hover:underline">App Store</a>
         </nav>
       </div>

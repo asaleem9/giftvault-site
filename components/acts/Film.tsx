@@ -29,9 +29,9 @@ export function Film() {
       <div className="reveal mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="eyebrow">The film</p>
-          <h2 id="film-title" className="mt-3 text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold tracking-[-0.02em]">Forty seconds, start to register.</h2>
+          <h2 id="film-title" className="mt-3 text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold tracking-[-0.02em]">Forty seconds from a drawer of cards to a scanned barcode.</h2>
         </div>
-        <p className="max-w-sm text-sm text-mist">Real screens, real clips from the app's own test runs. Nothing mocked.</p>
+        <p className="max-w-sm text-sm text-mist">Every screen and clip in it is a real recording from the app's test runs.</p>
       </div>
       <div className="reveal relative overflow-hidden rounded-3xl border border-hairline bg-surface shadow-[0_40px_120px_-40px_rgb(0_0_0/0.8)]">
         <video

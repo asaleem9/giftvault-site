@@ -19,12 +19,12 @@ export function Ledger() {
     <section id="balances" aria-labelledby="ledger-title" className="relative mx-auto w-[min(100%-2rem,72rem)] py-[18svh]">
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div className="reveal">
-          <p className="eyebrow">Balances you can trust</p>
+          <p className="eyebrow">Balances</p>
           <h2 id="ledger-title" className="mt-3 text-balance text-[clamp(1.9rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-[-0.02em]">
-            Log what you spend. The balance takes care of itself.
+            Log what you spend and the balance does the arithmetic.
           </h2>
           <p className="mt-4 max-w-md text-balance text-mist">
-            Spent, Added, Mark as used: each one is a line in the card's ledger with a running total. Backdate a purchase and the column recomputes.
+            Each Spent, Added or Mark as used entry is a row in the card's ledger with a running total. Backdate a purchase and the rows after it recompute.
           </p>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-hairline bg-surface">
@@ -49,9 +49,9 @@ export function Ledger() {
           </div>
 
           <blockquote className="mt-8 border-l-2 border-brass pl-5">
-            <p className="text-balance text-lg text-linen">No store lets apps read balances. GiftVault doesn't pretend to.</p>
+            <p className="text-balance text-lg text-linen">No store lets an app read a gift card balance, so GiftVault doesn't fake one.</p>
             <p className="mt-2 text-sm text-mist">
-              Check balance copies the number and PIN for two minutes and opens the store's own balance page. When you come back, it asks if the balance changed.
+              Check balance copies the number and PIN for two minutes and opens the store's own balance page. When you come back, it asks whether the balance changed.
             </p>
           </blockquote>
         </div>

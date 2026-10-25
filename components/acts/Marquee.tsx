@@ -1,7 +1,7 @@
 import { brandCards } from "@/lib/brand-cards";
 import { BrandLogo } from "@/components/BrandLogo";
 
-/** The 38 stores in the catalog, as colour chips with plain names (no logos). Two rows drift in opposite directions. */
+/** The catalog as chips with brand icons. Three rows drift in alternating directions. */
 export function Marquee() {
   // Three drifting rows, each a third of the catalog; the rows alternate direction.
   const third = Math.ceil(brandCards.length / 3);
@@ -10,7 +10,8 @@ export function Marquee() {
     <section aria-labelledby="stores-title" className="overflow-hidden py-[10svh]">
       <div className="mx-auto mb-8 w-[min(100%-2rem,72rem)]">
         <p className="eyebrow">Stores</p>
-        <h2 id="stores-title" className="mt-3 text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold tracking-[-0.02em]">The stores you already shop at, with their balance pages built in. Any card works.</h2>
+        <h2 id="stores-title" className="mt-3 text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold tracking-[-0.02em]">The stores you already have cards for, with their balance pages built in.</h2>
+        <p className="mt-3 max-w-xl text-mist">A store that isn't listed still works as a custom card.</p>
       </div>
       <div className="flex flex-col gap-3" aria-hidden="true">
         {rows.map((row, i) => (
